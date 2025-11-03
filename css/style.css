@@ -1,0 +1,109 @@
+body {
+    background: url('https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #e6e6e6;
+}
+
+header {
+    background: #00ff9d;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: auto;
+    background: #0d0d0d; color: #e6e6e6;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #00ff9d;
+    margin-bottom: 15px;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+.golpe {
+    background: rgba(0, 255, 157, 0.08);
+    padding: 15px;
+    border-left: 4px solid #00ff9d;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #00ff9d;
+    color: #000;
+    margin-top: 40px;
+}
+
+.hero {
+    position: relative;
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+    background: rgba(0,0,0,0.5);
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    z-index: 1;
+}
+
+.conteudo-hero {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: auto;
+}
+
+.conteudo-hero h1 {
+    opacity: 0;
+    transform: translateY(25px) scale(0.95);
+    will-change: transform, opacity;
+}
+.conteudo-hero h1.animar {
+    animation: aparecerTitulo 1.8s ease-out forwards;
+    -webkit-animation: aparecerTitulo 1.8s ease-out forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes aparecerTitulo {
+    0%   { opacity: 0; transform: translateY(25px) scale(0.95); }
+    60%  { opacity: 1; transform: translateY(0) scale(1.03); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes aparecerTitulo {
+    0%   { opacity: 0; transform: translateY(25px) scale(0.95); }
+    60%  { opacity: 1; transform: translateY(0) scale(1.03); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+}
