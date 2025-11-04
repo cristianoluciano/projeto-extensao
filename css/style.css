@@ -6,6 +6,73 @@ body {
     color: #e6e6e6;
 }
 
+/* Barra principal */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(3px);
+  padding: 15px 30px;
+  color: white;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Itens do menu */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.6em;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #00ff9d;
+}
+
+/* Ícone do menu (hambúrguer) */
+.menu-toggle {
+  display: none;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    background: #1b263b;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 20px 0;
+    border-radius: 0 0 0 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
 header {
     background: #00ff9d;
     color: white;
@@ -42,6 +109,64 @@ h2 {
 ul {
     margin-left: 20px;
 }
+
+#opcoes-modulos {
+  text-align: center; /* mantém o título centralizado */
+  margin-top: 20px;
+}
+
+.container-modulos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.modulos {
+  width: 28%;
+  background: rgba(0, 255, 157, 0.08);
+  padding: 15px;
+  border-top: 4px solid #00ff9d;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 255, 157, 0.1);
+  transition: 0.3s;
+}
+
+.modulos:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(0, 255, 157, 0.3);
+}
+
+#botao-opcoes {
+  margin-top: 10px;
+  background: #00ff9d;
+  border: none;
+  color: #0d1b2a;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#botao-opcoes:hover {
+  background: #00cc7f;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .container-modulos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modulos {
+    width: 90%;
+  }
+}
+
 
 .golpe {
     background: rgba(0, 255, 157, 0.08);
@@ -176,4 +301,72 @@ footer {
     0%   { opacity: 0; transform: translateY(25px) scale(0.95); }
     60%  { opacity: 1; transform: translateY(0) scale(1.03); }
     100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* FORMULARIO DO QUIZ*/
+
+/* blocos das perguntas */
+.pergunta {
+  background: rgba(0, 255, 157, 0.08);
+  border-left: 4px solid #00ff9d;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+/* estilização dos botões de seleção */
+.pergunta input[type="radio"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #00ff9d;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  margin-right: 6px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.pergunta input[type="radio"]:checked {
+  background-color: #00ff9d;
+  box-shadow: 0 0 5px #00ff9d;
+}
+
+/* label ajustado */
+.pergunta label {
+  margin-right: 15px;
+  cursor: pointer;
+}
+.pergunta strong {
+  display: block;
+  margin-bottom: 10px; /* 👈 afasta o texto da pergunta das opções */
+}
+
+/* botão de envio */
+.botao-form {
+  background: #00ff9d;
+  color: #0d1b2a;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.botao-form:hover {
+  background: #00cc7f;
+}
+
+/* efeito suave */
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade.mostrar {
+  opacity: 1;
+  transform: translateY(0);
 }

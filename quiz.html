@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Segurança na Internet</title>
+</head>
+<body>
+
+    <nav class="navbar">
+    <div class="logo"><img src="assets/Gemini_Generated_Image_8ipore8ipore8ipo.png" style="width: 100px;" alt="Logo"></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#">Início</a></li>
+      <li><a href="#">Sobre</a></li>
+      <li><a href="#">Serviços</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+    <div class="menu-toggle" id="menuToggle">&#9776;</div>
+  </nav>
+
+  <script>
+    // Script simples para abrir/fechar o menu no mobile
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
+
+
+    <header class="hero">
+        <div class="overlay"></div>
+        <div class="conteudo-hero">
+            <h1 class="animar"> Bem-vindo ao Questionário sobre <span style="color: #00ff9d;"> Segurança Digital</span>  para descobrir seu nível de conhecimento</h1>
+            <p> <br><br>Antes de começar a explorar o site, é importante entender qual trilha melhor se encaixa para você começar com o pé direito!<br><br>
+                <br><br><br></p> 
+            <h2 style="color: white;">Por isso criamos um <span style="color: #00ff9d;"> Questionário</span> simples e intuitivo para você:</h2>
+        </div>
+    </header>
+
+    
+
+<section id="analise-perfil">
+  <h2 style="text-align: center;">Análise de Perfil em Cibersegurança</h2>
+  <p>
+    Responda as perguntas abaixo para descobrir seu nível de conhecimento sobre cibersegurança.
+    O resultado indicará se você é um <strong>iniciante</strong> ou um <strong>usuário intermediário</strong> no tema.
+  </p>
+
+  <div style="text-align: center; margin-bottom: 20px;">
+    <button id="mostrarForm" class="botao-form">Iniciar Análise</button>
+  </div>
+
+  <div id="formulario" class="fade" style="display: none;">
+    <form id="quizForm">
+      <!-- Cada pergunta envolvida em um bloco estilo .golpe -->
+      <div class="pergunta">
+        <strong>1. Você usa senhas diferentes para cada conta?</strong><br>
+        <label><input type="radio" name="q1" value="1"> Sim</label>
+        <label><input type="radio" name="q1" value="0"> Não</label>
+      </div>
+
+      <div class="pergunta">
+        <strong>2. Você verifica o remetente antes de abrir e-mails suspeitos?</strong><br>
+        <label><input type="radio" name="q2" value="1"> Sim</label>
+        <label><input type="radio" name="q2" value="0"> Não</label>
+      </div>
+
+      <div class="pergunta">
+        <strong>3. Você usa autenticação em duas etapas?</strong><br>
+        <label><input type="radio" name="q3" value="1"> Sim</label>
+        <label><input type="radio" name="q3" value="0"> Não</label>
+      </div>
+
+      <div class="pergunta">
+        <strong>4. Você evita clicar em links desconhecidos?</strong><br>
+        <label><input type="radio" name="q4" value="1"> Sim</label>
+        <label><input type="radio" name="q4" value="0"> Não</label>
+      </div>
+
+      <div class="pergunta">
+        <strong>5. Você mantém o antivírus atualizado?</strong><br>
+        <label><input type="radio" name="q5" value="1"> Sim</label>
+        <label><input type="radio" name="q5" value="0"> Não</label>
+      </div>
+
+      <div class="pergunta">
+        <strong>6. Você confere se o site é seguro (https) antes de inserir dados?</strong><br>
+        <label><input type="radio" name="q6" value="1"> Sim</label>
+        <label><input type="radio" name="q6" value="0"> Não</label>
+      </div>
+
+      <div class="pergunta">
+        <strong>7. Suas senhas contêm letras, números e símbolos?</strong><br>
+        <label><input type="radio" name="q7" value="1"> Sim</label>
+        <label><input type="radio" name="q7" value="0"> Não</label>
+      </div>
+
+      <div class="pergunta">
+        <strong>8. Você evita compartilhar informações pessoais em sites desconhecidos?</strong><br>
+        <label><input type="radio" name="q8" value="1"> Sim</label>
+        <label><input type="radio" name="q8" value="0"> Não</label>
+      </div>
+
+      <div class="pergunta">
+        <strong>9. Você atualiza regularmente o sistema operacional do seu dispositivo?</strong><br>
+        <label><input type="radio" name="q9" value="1"> Sim</label>
+        <label><input type="radio" name="q9" value="0"> Não</label>
+      </div>
+
+      <div class="pergunta">
+        <strong>10. Você evita acessar dados pessoais em redes Wi-Fi públicas?</strong><br>
+        <label><input type="radio" name="q10" value="1"> Sim</label>
+        <label><input type="radio" name="q10" value="0"> Não</label>
+      </div>
+
+      <div class="pergunta">
+        <strong>11. Você baixa aplicativos apenas de fontes oficiais?</strong><br>
+        <label><input type="radio" name="q11" value="1"> Sim</label>
+        <label><input type="radio" name="q11" value="0"> Não</label>
+      </div>
+
+      <div class="pergunta">
+        <strong>12. Você reconhece mensagens de phishing?</strong><br>
+        <label><input type="radio" name="q12" value="1"> Sim</label>
+        <label><input type="radio" name="q12" value="0"> Não</label>
+      </div>
+
+      <div class="pergunta">
+        <strong>13. Você configurou a privacidade das suas redes sociais?</strong><br>
+        <label><input type="radio" name="q13" value="1"> Sim</label>
+        <label><input type="radio" name="q13" value="0"> Não</label>
+      </div>
+
+      <div class="pergunta">
+        <strong>14. Você sabe o que é engenharia social?</strong><br>
+        <label><input type="radio" name="q14" value="1"> Sim</label>
+        <label><input type="radio" name="q14" value="0"> Não</label>
+      </div>
+
+      <div class="pergunta">
+        <strong>15. Você realiza backup dos seus arquivos regularmente?</strong><br>
+        <label><input type="radio" name="q15" value="1"> Sim</label>
+        <label><input type="radio" name="q15" value="0"> Não</label>
+      </div>
+
+      <div style="text-align: center;">
+        <button type="submit" class="botao-form">Ver resultado</button>
+      </div>
+    </form>
+
+    <p id="resultado" style="font-weight: bold; margin-top: 15px; text-align: center;"></p>
+  </div>
+</section>
+
+
+<script>
+  const botaoMostrar = document.getElementById("mostrarForm");
+  const formulario = document.getElementById("formulario");
+
+  botaoMostrar.addEventListener("click", () => {
+    if (formulario.style.display === "none") {
+      formulario.style.display = "block";
+      setTimeout(() => formulario.classList.add("mostrar"), 10);
+    } else {
+      formulario.classList.remove("mostrar");
+      setTimeout(() => formulario.style.display = "none", 400);
+    }
+  });
+
+  document.getElementById("quizForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let acertos = 0;
+    for (let i = 1; i <= 15; i++) {
+      const resposta = document.querySelector(`input[name="q${i}"]:checked`);
+      if (resposta) acertos += parseInt(resposta.value);
+    }
+
+    const resultado = document.getElementById("resultado");
+    if (acertos >= 10) {
+      resultado.textContent = `Você acertou ${acertos}/15. Perfil: Intermediário em Cibersegurança 🔐`;
+      resultado.style.color = "#00ff9d";
+    } else {
+      resultado.textContent = `Você acertou ${acertos}/15. Perfil: Iniciante em Cibersegurança 🧠`;
+      resultado.style.color = "#ff6666";
+    }
+  });
+</script>
+
+
+
+
+    <footer>
+        <p>Projeto de Extensão — Navegar com segurança | 2025</p>
+    </footer>
+</body>
+</html>

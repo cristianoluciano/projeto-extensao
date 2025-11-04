@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Segurança na Internet - Aprenda</title>
+</head>
+<body>
+
+    <nav class="navbar">
+    <div class="logo"><img src="assets/Gemini_Generated_Image_8ipore8ipore8ipo.png" style="width: 100px;" alt="Logo"></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#">Início</a></li>
+      <li><a href="#">Sobre</a></li>
+      <li><a href="#">Serviços</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+    <div class="menu-toggle" id="menuToggle">&#9776;</div>
+  </nav>
+
+  <script>
+    // Script simples para abrir/fechar o menu no mobile
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
+
+
+    <header class="hero">
+        <div class="overlay"></div>
+        <div class="conteudo-hero">
+            <h1 class="animar"> Seja bem-vindo, aprenda mais sobre <span style="color: #00ff9d;"> Segurança Digital</span>  e evite cair em golpes</h1>
+            <p> Aqui você aprenderá o básico para identificar atitudes suspeitas e evitar ser vitima de fraudes online.</p>
+        </div>
+    </header>
+
+
+    <section id="importancia">
+        <h2 style="text-align: center;">O que é Cibersegurança?</h2>
+        <p>Resumidamente, Cibersegurança é o conjunto de práticas e medidas usadas para proteger computadores, celulares, redes e dados contra ataques, roubo ou uso indevido.
+Em outras palavras, é como trancar as portas do mundo digital — evitando que invasores acessem suas informações pessoais, redes sociais, contas bancárias ou sistemas de empresas.
+Ela envolve cuidados simples, como usar senhas fortes, não clicar em links suspeitos, manter antivírus atualizado e proteger informações pessoais na internet. <br><br>
+
+
+<span style="color: #00ff9d;">Cibersegurança</span> é cuidar da sua segurança no mundo online, assim como você cuida da sua casa no mundo real.</p>
+    </section>
+
+<section id="opcoes-modulos">
+    <h2> TRILHA DE APRENDIZADO</h2>
+  <h2 style="color: white;">Escolha a trilha de acordo com seu nível de experiência para uma aprendizagem mais eficaz</h2>
+
+  <div class="container-modulos">
+    <div class="modulos">
+      <strong>Aprendiz iniciante</strong>
+      <p>Ideal para pessoas que tem pouco conhecimento sobre Segurança Digital, e quer construir uma base inicial.</p>
+      <button id="botao-opcoes">Iniciar estudos</button>
+    </div>
+
+    <div class="modulos">
+      <strong>Aprendiz Intermediário</strong>
+      <p>Feito para pessoas que convivem com o digital diariamente, mas ainda buscam dicas e conhecimento a mais. </p>
+      <button id="botao-opcoes">Iniciar estudos</button>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+    <footer>
+        <p>Projeto de Extensão — Segurança na Internet | 2025</p>
+    </footer>
+</body>
+</html>

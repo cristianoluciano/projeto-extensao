@@ -5,3 +5,5 @@ document.addEventListener('DOMContentLoaded', function () {
     
     setTimeout(() => titulo.classList.add('animar'), 120);
 });
+
+

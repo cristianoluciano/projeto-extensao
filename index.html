@@ -8,109 +8,109 @@
 </head>
 <body>
 
+    <nav class="navbar">
+    <div class="logo"><img src="assets/Gemini_Generated_Image_8ipore8ipore8ipo.png" style="width: 100px;" alt="Logo"></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#">Início</a></li>
+      <li><a href="#">Sobre</a></li>
+      <li><a href="#">Serviços</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+    <div class="menu-toggle" id="menuToggle">&#9776;</div>
+  </nav>
+
+  <script>
+    // Script simples para abrir/fechar o menu no mobile
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
+
+
     <header class="hero">
         <div class="overlay"></div>
         <div class="conteudo-hero">
-            <h1 class="animar">Segurança Digital para uma Sociedade Mais Justa</h1>
-            <p>Promovendo paz, justiça e instituições eficazes por meio da informação e da proteção online — alinhado à ODS 16 da ONU.</p>
+            <h1 class="animar"> Navegar com segurança - <span style="color: #00ff9d;"> Segurança Digital</span>  para uma sociedade mais justa</h1>
+            <p>O intuito desse projeto é a capacitação e proteção da ONG e do seu público contra golpes cibernéticos. Promovendo paz, justiça e instituições eficazes por meio da informação e da proteção online — alinhado à ODS 16 da ONU, e também a ODS 4 . <br><br><br><br></p> 
+            <h2 style="color: white;">Antes de iniciar, recomendamos que descubra seu nível de <span style="color: #00ff9d;"> conhecimento</span> para uma melhor experiência:</h2>
+            <a href="quiz.html"><button style="width: 80%; " id="botao-opcoes">Descubra!</button></a>
         </div>
     </header>
 
+
+<section id="opcoes-modulos">
+  <h2>Escolha por onde começar</h2>
+
+  <div class="container-modulos">
+    <div class="modulos">
+      <strong>Aprenda!</strong>
+      <p>Aprenda técnicas para identificar os golpes mais comuns e evitá-los</p>
+      <a href="aprenda.html"><button id="botao-opcoes" >Aprender</button></a>
+    </div>
+
+    <div class="modulos">
+      <strong>Teste seus conhecimentos!</strong>
+      <p>Está confiante de que não cairá em golpes? Então teste seu conhecimento com nosso quiz personalizado!</p>
+      <button id="botao-opcoes">Iniciar quiz</button>
+    </div>
+
+    <div class="modulos">
+      <strong>Veja os golpes mais comuns!</strong>
+      <p>Criminosos estão cada vez mais munidos de ferramentas e estratégias, entenda como agem e o que utilizam</p>
+      <button id="botao-opcoes">Saiba mais</button>
+    </div>
+  </div>
+</section>
+
+
     <section id="importancia">
-        <h2>Por que isso é importante?</h2>
-        <p>A ODS 16 defende a construção de sociedades mais seguras, com acesso à justiça e instituições eficazes. No ambiente digital, isso significa garantir que todas as pessoas tenham conhecimento para se proteger de golpes e crimes virtuais, fortalecendo a confiança e a segurança online na comunidade.</p>
+        <h2 style="text-align: center;">Por que isso é importante?</h2>
+        <p>A Importância da Educação Digital na Prevenção de Golpes
+            Em um mundo cada vez mais conectado, a educação digital surge como uma ferramenta indispensável na luta contra os golpes e fraudes online. Não basta apenas ter as ferramentas de segurança; é crucial que os usuários desenvolvam uma mentalidade crítica e consciente sobre os riscos que circulam na internet. 
+            A ODS 16 defende a construção de sociedades mais seguras, com acesso à justiça e instituições eficazes. No ambiente digital, isso significa garantir que todas as pessoas tenham conhecimento para se proteger de golpes e crimes virtuais, fortalecendo a confiança e a segurança online na comunidade.</p>
     </section>
+
 
     <section id="tipos-golpes">
-        <h2>Ameaças Digitais Comuns</h2>
+        <h2 style="text-align: center;">Sobre as ODS (Objetivos de Desenvolvimento Sustentável) 16 e 4:</h2>
+        <p>A relação entre as ODS 4 e 16 e a cibersegurança é fundamental para o desenvolvimento de uma sociedade digital segura e consciente. A ODS 4, ao promover uma educação de qualidade, incentiva a inclusão da educação digital e da conscientização sobre segurança online, capacitando cidadãos a reconhecer e evitar ameaças cibernéticas. Já a ODS 16 reforça a importância de instituições eficazes e transparentes, que garantam a proteção de dados, a privacidade e o combate ao cibercrime, fortalecendo a confiança nas relações digitais. Juntas, essas metas contribuem para um ambiente virtual mais seguro, ético e acessível a todos.</p>
+
+        <h2 style="text-align: center;">Esses são alguns pontos relevantes inerentes a cibersegurança e educação digital:</h2>
 
         <div class="golpe">
-            <strong>📄 Boleto falso</strong>
-            <p>Fraude utilizada para desviar pagamentos e causar prejuízos financeiros — um risco que afeta especialmente pessoas com menos acesso à informação.</p>
-        </div>
-
-        <div class="golpe">
-            <strong>✉️ Phishing por e-mail ou WhatsApp</strong>
-            <p>Tentativas de enganar cidadãos para roubo de dados sensíveis, enfraquecendo a segurança e privacidade digital.</p>
+            <strong>📄 Educação Digital</strong>
+            <p> Segura promover o ensino sobre segurança online, privacidade e uso ético da tecnologia.</p>
         </div>
 
         <div class="golpe">
-            <strong>📞 Falso suporte técnico</strong>
-            <p>Criminosos se passam por profissionais para acessar aparelhos, prejudicando a confiança em serviços essenciais.</p>
+            <strong>🧠 Capacitação tecnológica</strong>
+            <p>Formar cidadãos e profissionais capazes de se proteger contra ameaças cibernéticas.</p>
         </div>
 
         <div class="golpe">
-            <strong>💸 Golpe do Pix</strong>
-            <p>Abusa de situações de urgência emocional, explorando vulnerabilidades sociais e financeiras.</p>
+            <strong>🏫 Ambientes organazicionais digitais seguros</strong>
+            <p> Proteger ambientes organazicionais contra invasões e vazamentos.</p>
         </div>
 
         <div class="golpe">
-            <strong>🔐 Clonagem de WhatsApp</strong>
-            <p>Técnica que visa tomar contas de comunicação, afetando a segurança e integridade das relações pessoais.</p>
+            <strong>🔐 Proteção de dados e privacidade</strong>
+            <p>Reforça a necessidade de leis e políticas que garantam segurança digital e confiança nas instituições</p>
+        </div>
+
+        <div class="golpe">
+            <strong>🌍 Segurança digital como direito humano:</strong>
+            <p>Garantir que todos tenham um ambiente online seguro e livre de ameaças.</p>
         </div>
 
     </section>
 
-    <section id="identificar">
-        <h2>Como reconhecer riscos digitais</h2>
-        <p>Fortalecer a capacidade de identificar ameaças é essencial para promover segurança e justiça no ambiente online, como propõe a ODS 16.</p>
-        <ul>
-            <li>Mensagens apelando para medo, pressão ou urgência.</li>
-            <li>Links suspeitos ou URLs que imitam serviços oficiais.</li>
-            <li>Solicitação de códigos ou informações sigilosas.</li>
-            <li>Perfis falsos ou inconsistentes.</li>
-            <li>Pedidos financeiros sem confirmação adequada.</li>
-        </ul>
-    </section>
-
-    <section id="protecao">
-        <h2>Como se proteger e promover segurança</h2>
-        <p>Garantir ambientes digitais seguros fortalece instituições e contribui para a redução de crimes, alinhando-se diretamente à ODS 16.</p>
-        <ul>
-            <li>Ative verificação em duas etapas em todos os serviços importantes.</li>
-            <li>Utilize senhas fortes e diferentes para cada plataforma.</li>
-            <li>Evite clicar em links desconhecidos.</li>
-            <li>Confirme solicitações por áudio/vídeo antes de agir.</li>
-            <li>Compartilhe boas práticas de segurança com sua comunidade.</li>
-        </ul>
-    </section>
-
-    <section id="exemplos">
-        <h2>Exemplos que reforçam a importância da prevenção</h2>
-        <p><strong>• Caso 1:</strong> Dona Maria recebeu mensagem do "filho" pedindo dinheiro. Confirmando por áudio, ela poderia evitar cair no golpe — uma medida simples que fortalece sua segurança.</p>
-        <p><strong>• Caso 2:</strong> Seu João clicou em um link falso de banco. Com informação adequada, ele poderia identificar o risco e manter sua integridade digital protegida.</p>
-    </section>
-
-    <section id="oque-fazer">
-        <h2>O que fazer em caso de golpe</h2>
-        <p>Tomar atitudes rápidas e informadas ajuda a reduzir danos e reforça a justiça e proteção — pilares fundamentais da ODS 16.</p>
-        <ul>
-            <li>Contate seu banco imediatamente.</li>
-            <li>Registre um boletim de ocorrência digital.</li>
-            <li>Altere senhas e habilite verificações extras de segurança.</li>
-            <li>Informe contatos próximos para evitar novos ataques.</li>
-        </ul>
-        <br>
-    </section>
-
-    <section id="video-caso">
-        <h2>📺 Caso Real: Prisão de Golpistas</h2>
-        <p>Assista ao vídeo abaixo onde dois jovens suspeitos de aplicar golpes na internet são presos em São Paulo. Entender situações reais como essa ajuda a reforçar a nossa vigilância e responsabilidade digital.</p>
-        <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/U-yHsg8Ln2A" title="Vídeo Jornal da Record: jovens presos por golpes na internet" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    </section>
-
-    <section id="video-clonagem-voz">
-        <h2>🔊 Caso Real: Clonagem de Voz com Inteligência Artificial</h2>
-        <p>Assista ao vídeo abaixo onde golpes usando a clonagem de voz com IA estão em ascensão. A tecnologia que protege pode também ser usada para enganar — entender esse risco reforça a justiça e segurança digital, conforme a ODS 16.</p>
-        <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/vqx5DiIuVUQ" title="Fantástico: Golpes de clonagem de voz avançam com uso de Inteligência Artificial" frameborder="0" allow="accelerometer; autoplay; clipboard-write encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    </section>
 
     <footer>
-        <p>Projeto de Extensão — Segurança na Internet | 2025</p>
+        <p>Projeto de Extensão — Navegar com segurança | 2025</p>
     </footer>
 </body>
 </html>
