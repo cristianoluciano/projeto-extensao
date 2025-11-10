@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Aprenda | Segurança Digital</title>
+  <style>
+    /* 🔽 AJUSTE DE LAYOUT: módulos empilhados */
+    .container-modulos {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .modulos {
+      width: 96%;
+      background: rgba(0, 255, 157, 0.08);
+      padding: 20px;
+      border-left: 4px solid #00ff9d;
+      border-radius: 10px;
+      color: white;
+      box-shadow: 0 0 10px rgba(0, 255, 157, 0.1);
+      transition: 0.3s;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo"><img src="assets/Gemini_Generated_Image_8ipore8ipore8ipo.png" style="width: 100px;" alt="Logo"></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="aprenda.html" style="color:#00ff9d;">Aprenda</a></li>
+      <li><a href="#">Serviços</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+    <div class="menu-toggle" id="menuToggle">&#9776;</div>
+  </nav>
+
+  <!-- SCRIPT NAVBAR MOBILE -->
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
+  </script>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="overlay"></div>
+    <div class="conteudo-hero">
+      <h1 class="animar">Aprenda a se proteger no mundo digital 🧠</h1>
+      <p>Conheça os principais conceitos de cibersegurança e aprenda como evitar golpes cibernéticos de forma simples e eficaz.</p>
+    </div>
+  </header>
+
+  <!-- SEÇÃO DE CONTEÚDO PRINCIPAL -->
+  <section id="conteudo-aprendizado">
+    <h2>Módulos de Aprendizado</h2>
+    <p>Clique em um módulo para iniciar o aprendizado sobre cibersegurança.</p>
+
+    <div class="container-modulos">
+
+      <!-- MÓDULO 01 -->
+      <div class="modulos">
+        <h3>🔐 Módulo 01 - O que é Cibersegurança</h3>
+        <p>Entenda os conceitos básicos sobre segurança digital e por que ela é essencial no mundo atual.</p>
+        <button class="botao-form" onclick="abrirModulo('mod1')">Iniciar</button>
+
+        <div id="mod1" class="conteudo-modulo" style="display:none;">
+          <p>A cibersegurança protege dados e sistemas contra ataques e acessos indevidos.</p>
+
+        <!-- 🔹 Texto de Estudo -->
+    <div class="estudo" style="background:#0b0b0b;padding:15px;border-radius:8px;margin-bottom:12px;color:#e6e6e6;">
+      <h4 style="color:#00ff9d;margin-top:0;">Conteúdo de Estudo — O que é Cibersegurança</h4>
+      <p>A cibersegurança é o conjunto de práticas, processos e tecnologias criadas para proteger sistemas, redes e dados contra acessos não autorizados, ataques ou danos. Em um mundo cada vez mais conectado, proteger informações digitais é essencial para garantir a privacidade e a segurança de pessoas, empresas e organizações.</p>
+
+      <p>O principal objetivo da cibersegurança é preservar três pilares fundamentais:</p>
+
+      <ul>
+        <li><strong>Confidencialidade:</strong> garantir que apenas pessoas autorizadas tenham acesso às informações;</li>
+        <li><strong>Integridade:</strong> assegurar que os dados não sejam alterados ou corrompidos de forma indevida;</li>
+        <li><strong>Disponibilidade:</strong> garantir que os sistemas e informações estejam acessíveis sempre que necessário.</li>
+      </ul>
+
+      <p>Entre as ferramentas de proteção mais conhecidas está o <strong>firewall</strong>, um tipo de barreira digital que monitora e controla o tráfego de dados entre redes, bloqueando comunicações suspeitas e prevenindo invasões.</p>
+
+      <p>Outro conceito importante é o de <strong>dados sensíveis</strong>, que são informações pessoais capazes de causar danos ou constrangimentos caso sejam divulgadas sem autorização. Isso inclui, por exemplo, dados bancários, registros médicos, endereços e documentos de identidade.</p>
+
+      <p>No Brasil, a <strong>Lei Geral de Proteção de Dados (LGPD)</strong> é a principal norma que regula o tratamento e a proteção dessas informações. A <strong>Autoridade Nacional de Proteção de Dados (ANPD)</strong> é o órgão responsável por fiscalizar e garantir que empresas e instituições sigam as regras da lei.</p>
+
+      <p>Um <strong>ciberataque</strong> pode ter diversos objetivos, como roubar informações, paralisar serviços ou causar prejuízos financeiros. Por isso, é fundamental que todos — e não apenas os profissionais de tecnologia — adotem medidas de segurança digital no dia a dia.</p>
+
+      <p>Uma dessas medidas é a <strong>autenticação de dois fatores (2FA)</strong>, que adiciona uma camada extra de segurança ao exigir, além da senha, um segundo tipo de verificação, como um código enviado por SMS ou aplicativo. Isso dificulta o acesso de invasores, mesmo que consigam descobrir a senha do usuário.</p>
+
+      <p>Outra técnica essencial é a <strong>criptografia</strong>, que transforma as informações em códigos indecifráveis durante o envio ou armazenamento. Assim, mesmo que um dado seja interceptado, ele permanecerá ilegível para quem não tiver a chave de acesso.</p>
+
+      <p>Em resumo, a segurança digital é uma responsabilidade coletiva. Todos os usuários — desde o indivíduo que navega nas redes sociais até as grandes empresas — devem adotar práticas seguras, como usar senhas fortes, evitar clicar em links suspeitos e manter seus sistemas sempre atualizados.</p>
+    </div>
+
+     <section id="video-caso">
+        <h2>📺 Cibersegurança</h2>
+        <p>Assista ao vídeo abaixo para entender melhor o que trata a área da cibersegurança</p>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/CU2yQxzkvFg" title="Você sabe o que é CIBERSEGURANÇA?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+
+          <form id="quiz1">
+                <div class="pergunta"><strong>1.</strong> O que é cibersegurança?<br>
+                
+                <label><input type="radio" name="q1_1" value="0"> Técnicas para melhorar o desempenho de redes domésticas</label><br>
+                <label><input type="radio" name="q1_1" value="1"> Conjunto de práticas que protegem sistemas e dados contra ataques</label><br>
+                <label><input type="radio" name="q1_1" value="0"> Processos de backup automático de arquivos</label>
+                </div>
+
+                <div class="pergunta"><strong>2.</strong> Qual é o principal objetivo da cibersegurança?<br>
+                
+                <label><input type="radio" name="q1_2" value="0"> Reduzir o consumo de energia dos servidores</label><br>
+                <label><input type="radio" name="q1_2" value="1"> Garantir a integridade, confidencialidade e disponibilidade das informações</label><br>
+                <label><input type="radio" name="q1_2" value="0"> Melhorar o design de aplicativos</label>
+                </div>
+
+                <div class="pergunta"><strong>3.</strong> Um firewall serve para:<br>
+                
+                <label><input type="radio" name="q1_3" value="0"> Armazenar senhas de usuários</label><br>
+                <label><input type="radio" name="q1_3" value="0"> Controlar a velocidade da internet</label><br>
+                <label><input type="radio" name="q1_3" value="1"> Monitorar e bloquear comunicações não autorizadas na rede</label>
+                </div>
+
+                <div class="pergunta"><strong>4.</strong> O que são dados sensíveis?<br>
+                <label><input type="radio" name="q1_4" value="1"> Informações pessoais que podem causar danos se divulgadas</label><br>
+                <label><input type="radio" name="q1_4" value="0"> Dados de navegação pública disponíveis em sites</label><br>
+                <label><input type="radio" name="q1_4" value="0"> Arquivos de mídia compartilhados em redes sociais</label>
+                </div>
+
+                <div class="pergunta"><strong>5.</strong> Qual órgão no Brasil regula a proteção de dados?<br>
+                <label><input type="radio" name="q1_5" value="1"> ANPD (Autoridade Nacional de Proteção de Dados)</label><br>
+                <label><input type="radio" name="q1_5" value="0"> ANATEL (Agência Nacional de Telecomunicações)</label><br>
+                <label><input type="radio" name="q1_5" value="0"> CNJ (Conselho Nacional de Justiça)</label>
+                </div>
+
+                <div class="pergunta"><strong>6.</strong> Um ciberataque pode:<br>
+                
+                <label><input type="radio" name="q1_6" value="0"> Corrigir vulnerabilidades automaticamente</label><br>
+                <label><input type="radio" name="q1_6" value="1"> Comprometer a segurança e roubar informações confidenciais</label><br>
+                <label><input type="radio" name="q1_6" value="0"> Aumentar a capacidade de armazenamento do sistema</label>
+                </div>
+
+                <div class="pergunta"><strong>7.</strong> O que significa “LGPD”?<br>
+                <label><input type="radio" name="q1_7" value="1"> Lei Geral de Proteção de Dados</label><br>
+                <label><input type="radio" name="q1_7" value="0"> Legislação Governamental de Privacidade Digital</label><br>
+                <label><input type="radio" name="q1_7" value="0"> Licença Global de Programas Digitais</label>
+                </div>
+
+                <div class="pergunta"><strong>8.</strong> A autenticação de dois fatores:<br>
+                <label><input type="radio" name="q1_8" value="1"> Exige uma segunda verificação além da senha</label><br>
+                <label><input type="radio" name="q1_8" value="0"> É usada apenas em redes corporativas</label><br>
+                <label><input type="radio" name="q1_8" value="0"> Substitui completamente o uso de senhas</label>
+                </div>
+
+                <div class="pergunta"><strong>9.</strong> O que é criptografia?<br>
+                
+                <label><input type="radio" name="q1_9" value="0"> Método de compactar arquivos para economizar espaço</label><br>
+                <label><input type="radio" name="q1_9" value="1"> Técnica que transforma dados em códigos para protegê-los</label><br>
+                <label><input type="radio" name="q1_9" value="0"> Processo de remoção de vírus de sistemas</label>
+                </div>
+
+                <div class="pergunta"><strong>10.</strong> Quem é responsável pela segurança digital?<br>
+                <label><input type="radio" name="q1_10" value="1"> Todos os usuários, de forma individual e coletiva</label><br>
+                <label><input type="radio" name="q1_10" value="0"> Apenas os profissionais de TI</label><br>
+                <label><input type="radio" name="q1_10" value="0"> Somente o administrador da rede</label>
+                </div>
+
+            <button type="submit" class="botao-form">Enviar</button>
+            <p class="resultado"></p>
+          </form>
+        </div>
+      </div>
+
+      <!-- MÓDULO 02 -->
+<div class="modulos">
+  <h3>⚠️ Módulo 02 - Golpes mais comuns em 2025</h3>
+  <p>Conheça os principais tipos de golpes digitais e aprenda a identificá-los antes que causem prejuízos.</p>
+  <button class="botao-form" onclick="abrirModulo('mod2')">Iniciar</button>
+
+  <div id="mod2" class="conteudo-modulo" style="display:none;">
+    <p>Os golpes digitais evoluem constantemente. Em 2025, criminosos utilizam engenharia social, inteligência artificial e falsificação de identidade para enganar vítimas em sites, e-mails e redes sociais.</p>
+
+    <div class="estudo" style="background:#0b0b0b;padding:15px;border-radius:8px;margin-bottom:12px;color:#e6e6e6;">
+  <h4 style="color:#00ff9d;margin-top:0;">Conteúdo de Estudo — Golpes e Engenharia Social</h4>
+
+  <p>Com o avanço da tecnologia e a popularização da internet, os golpes digitais se tornaram cada vez mais sofisticados e comuns. Entender como eles funcionam é essencial para se proteger e navegar com segurança no ambiente virtual.</p>
+
+  <p>Um dos golpes mais frequentes é o <strong>phishing</strong>, que consiste em enganar o usuário para que ele revele informações pessoais, como senhas e dados bancários. Normalmente, os criminosos enviam e-mails ou mensagens que imitam empresas conhecidas, levando a vítima a acessar sites falsos e preencher formulários fraudulentos.</p>
+
+  <p>Outro golpe bastante comum é o do <strong>falso suporte técnico</strong>, em que os golpistas se passam por técnicos de empresas legítimas e convencem a vítima a conceder acesso remoto ao seu computador, alegando que há um problema urgente a ser resolvido. Uma vez com o controle do sistema, eles podem roubar dados, senhas ou instalar programas maliciosos.</p>
+
+  <p>Com a popularização dos pagamentos digitais, surgiram também os <strong>QR Codes falsos</strong>, criados para redirecionar o usuário a sites fraudulentos ou capturar informações de pagamento. Sempre verifique a origem do código antes de escanear.</p>
+
+  <p>A <strong>engenharia social</strong> é uma das técnicas mais perigosas e eficazes usadas pelos golpistas. Em vez de explorar falhas técnicas, ela se aproveita de falhas humanas — manipulando emoções como medo, confiança e curiosidade para obter informações sigilosas. Mensagens com pedidos urgentes, ofertas imperdíveis ou promessas de prêmios são exemplos clássicos desse tipo de ataque.</p>
+
+  <p>Nos últimos anos, o <strong>golpe do falso emprego</strong> ganhou destaque. Nele, a vítima é atraída por uma vaga de trabalho falsa e, para continuar o processo seletivo, precisa pagar uma taxa ou fornecer dados pessoais. Esses dados podem ser usados para fraudes ou roubos de identidade.</p>
+
+  <p>Outro golpe muito comum é o <strong>golpe do PIX</strong>, no qual os criminosos se passam por conhecidos ou empresas e pedem transferências urgentes. Ao criar um senso de pressa, eles fazem com que a vítima envie dinheiro sem verificar a veracidade da solicitação.</p>
+
+  <p>Com o avanço da inteligência artificial, também surgiram os <strong>deepfakes</strong>, vídeos e áudios falsos criados por IA que imitam vozes e rostos de pessoas reais. Essa tecnologia pode ser usada para disseminar desinformação ou aplicar golpes de identidade digital.</p>
+
+  <p>Entre os sinais mais claros de golpe estão os <strong>e-mails fraudulentos</strong>, que frequentemente contêm erros ortográficos, links suspeitos e mensagens com tom de urgência, pedindo ações imediatas. Nenhuma instituição legítima solicita senhas, códigos ou transferências por mensagens dessa forma.</p>
+
+  <p>Para se proteger, é fundamental manter o olhar crítico e adotar boas práticas digitais: verificar sempre o remetente antes de clicar em links, desconfiar de mensagens urgentes, evitar compartilhar dados pessoais e nunca realizar pagamentos antes de confirmar a autenticidade da fonte.</p>
+
+  <p>Os golpes digitais evoluem constantemente, mas a <strong>informação e a atenção</strong> continuam sendo as maiores armas contra eles. Entender como funcionam é o primeiro passo para garantir a sua segurança e a de todos ao seu redor.</p>
+</div>
+
+
+     <section id="video-caso">
+        <h2>📺 Caso de Golpes no Whatsapp</h2>
+        <p>Assista ao vídeo abaixo para entender como funciona alguns golpes funcionam:</p>
+        <div class="video-container">
+            <iframe width="1236" height="695" src="https://www.youtube.com/embed/7ELkXsK8SVY" title="Golpes online já estão entre os mais comuns de 2025; Whatsapp é principal alvo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+
+
+    <form id="quiz2">
+      <div class="pergunta"><strong>1.</strong> O que é um golpe de phishing?<br>
+        
+        <label><input type="radio" name="q2_1" value="0"> Processo de atualização automática de antivírus</label><br>
+        <label><input type="radio" name="q2_1" value="1"> Tentativa de enganar o usuário para obter dados pessoais e financeiros</label><br>
+        <label><input type="radio" name="q2_1" value="0"> Técnica usada por empresas para medir desempenho</label>
+      </div>
+
+      <div class="pergunta"><strong>2.</strong> Qual é o principal meio de propagação de golpes atualmente?<br>
+        <label><input type="radio" name="q2_2" value="1"> Mensagens em redes sociais e aplicativos de conversa</label><br>
+        <label><input type="radio" name="q2_2" value="0"> Cartas enviadas pelos correios</label><br>
+        <label><input type="radio" name="q2_2" value="0"> Chamadas telefônicas fixas</label>
+      </div>
+
+      <div class="pergunta"><strong>3.</strong> O que caracteriza o golpe de “falso suporte técnico”?<br>
+        <label><input type="radio" name="q2_3" value="1"> Criminosos se passam por técnicos e pedem acesso remoto ao computador</label><br>
+        <label><input type="radio" name="q2_3" value="0"> Técnicos reais pedem atualização de software</label><br>
+        <label><input type="radio" name="q2_3" value="0"> Falhas comuns em sistemas corporativos</label>
+      </div>
+
+      <div class="pergunta"><strong>4.</strong> O que é um golpe de QR Code falso?<br>
+        <label><input type="radio" name="q2_4" value="1"> Códigos adulterados que redirecionam o usuário para sites fraudulentos</label><br>
+        <label><input type="radio" name="q2_4" value="0"> Problema de leitura causado por câmera desatualizada</label><br>
+        <label><input type="radio" name="q2_4" value="0"> Erro de sistema ao pagar boletos legítimos</label>
+      </div>
+
+      <div class="pergunta"><strong>5.</strong> Como os golpistas utilizam a engenharia social?<br>
+        
+        <label><input type="radio" name="q2_5" value="0"> Através da criação de antivírus falsos</label><br>
+        <label><input type="radio" name="q2_5" value="0"> Monitorando redes de empresas públicas</label><br>
+        <label><input type="radio" name="q2_5" value="1"> Manipulando emoções e confiança para obter informações sigilosas</label>
+      </div>
+
+      <div class="pergunta"><strong>6.</strong> O que é o golpe de “falso emprego” muito usado em 2025?<br>
+        
+        <label><input type="radio" name="q2_6" value="0"> Convites legítimos de empresas verificadas</label><br>
+        <label><input type="radio" name="q2_6" value="0"> Pedidos de estágio com supervisão online</label><br>
+        <label><input type="radio" name="q2_6" value="1"> Falsas ofertas de trabalho que pedem pagamento antecipado ou dados pessoais</label>
+      </div>
+
+      <div class="pergunta"><strong>7.</strong> Como o golpe do PIX é geralmente aplicado?<br>
+        
+        <label><input type="radio" name="q2_7" value="0"> Problemas técnicos no sistema bancário</label><br>
+        <label><input type="radio" name="q2_7" value="1"> Criminosos se passam por conhecidos e solicitam transferências urgentes</label><br>
+        <label><input type="radio" name="q2_7" value="0"> Erros de digitação em aplicativos de banco</label>
+      </div>
+
+      <div class="pergunta"><strong>8.</strong> Qual é um sinal claro de um e-mail fraudulento?<br>
+        
+        <label><input type="radio" name="q2_8" value="0"> Design profissional e remetente confiável</label><br>
+        <label><input type="radio" name="q2_8" value="0"> Mensagens de confirmação de login legítimo</label><br>
+        <label><input type="radio" name="q2_8" value="1"> Links suspeitos, erros ortográficos e urgência na mensagem</label>
+      </div>
+
+      <div class="pergunta"><strong>9.</strong> O que é o golpe de deepfake?<br>
+        <label><input type="radio" name="q2_9" value="1"> Uso de IA para criar vídeos ou áudios falsos de pessoas reais</label><br>
+        <label><input type="radio" name="q2_9" value="0"> Técnica de backup de vídeo para segurança</label><br>
+        <label><input type="radio" name="q2_9" value="0"> Método de autenticação por reconhecimento facial</label>
+      </div>
+
+      <div class="pergunta"><strong>10.</strong> Qual é a melhor forma de se proteger contra golpes digitais?<br>
+        <label><input type="radio" name="q2_10" value="1"> Verificar informações antes de clicar e desconfiar de mensagens urgentes</label><br>
+        <label><input type="radio" name="q2_10" value="0"> Compartilhar senhas apenas com familiares</label><br>
+        <label><input type="radio" name="q2_10" value="0"> Baixar aplicativos de qualquer site</label>
+      </div>
+
+      <button type="submit" class="botao-form">Enviar</button>
+      <p class="resultado"></p>
+    </form>
+  </div>
+</div>
+      
+<!-- 🔹 MÓDULO 03 - Como evitar e se proteger de ameaças -->
+<div class="modulos">
+  <h3>🛡️ Módulo 03 - Como evitar e se proteger de ameaças</h3>
+  <p>Aprenda estratégias práticas para manter sua segurança digital e evitar cair em golpes.</p>
+  <button class="botao-form" onclick="abrirModulo('mod3')">Iniciar</button>
+
+  <div id="mod3" class="conteudo-modulo" style="display:none;">
+    <p>Proteger-se de ameaças digitais requer atenção constante, boas práticas e o uso de ferramentas adequadas. Pequenas atitudes diárias podem fazer uma grande diferença na prevenção de ataques e vazamentos de dados.</p>
+
+    <div class="estudo" style="background:#0b0b0b;padding:15px;border-radius:8px;margin-bottom:12px;color:#e6e6e6;">
+  <h4 style="color:#00ff9d;margin-top:0;">Conteúdo de Estudo — Como Evitar e se Proteger de Ameaças</h4>
+
+  <p>Proteger-se contra ameaças digitais exige atenção constante e boas práticas de segurança no dia a dia. Muitas invasões e golpes acontecem por descuido dos usuários, e pequenas atitudes podem fazer toda a diferença para garantir a segurança das suas informações.</p>
+
+  <p>Um dos passos mais importantes é a criação de <strong>senhas seguras</strong>. Senhas longas, com combinação de letras maiúsculas e minúsculas, números e símbolos, são muito mais difíceis de serem descobertas. Evite usar datas de nascimento, nomes ou repetições de senhas em diferentes sites, pois isso aumenta o risco de invasão.</p>
+
+  <p>Outro hábito essencial é manter <strong>todos os programas e sistemas operacionais atualizados</strong>. As atualizações corrigem falhas de segurança conhecidas que podem ser exploradas por hackers. Ignorar essas atualizações é deixar portas abertas para invasores.</p>
+
+  <p>Uma ferramenta muito eficaz é a <strong>autenticação de dois fatores (2FA)</strong>, que adiciona uma camada extra de segurança além da senha. Mesmo que alguém descubra sua senha, ainda será necessário um segundo código, geralmente enviado por SMS, aplicativo autenticador ou e-mail, para acessar a conta.</p>
+
+  <p>Ao receber <strong>e-mails suspeitos</strong>, nunca clique em links nem baixe anexos sem verificar a origem. Desconfie de mensagens que pedem ações imediatas, prêmios ou cobranças inesperadas. Sempre confira o endereço do remetente e, se necessário, apague a mensagem sem abrir os anexos.</p>
+
+  <p>Outra prática fundamental é adotar a <strong>navegação segura</strong>. Antes de inserir qualquer dado pessoal em um site, verifique se o endereço começa com <code>https://</code> e se há um cadeado ao lado da barra de endereço — sinais de que o site possui certificado de segurança.</p>
+
+  <p>O uso de um <strong>antivírus confiável</strong> é indispensável. Ele atua identificando, bloqueando e removendo softwares maliciosos que podem roubar dados, danificar arquivos ou espionar suas atividades. Mantenha-o sempre atualizado para garantir proteção contra as ameaças mais recentes.</p>
+
+  <p>Quando estiver usando <strong>redes Wi-Fi públicas</strong>, como em shoppings, cafés ou aeroportos, evite acessar contas bancárias, redes sociais ou sites que exigem login. Essas redes são mais vulneráveis a interceptações de dados e ataques de hackers.</p>
+
+  <p>Sites falsos de compras são outra armadilha comum. Desconfie de páginas com <strong>preços muito abaixo do normal, erros de digitação e ausência de informações de contato</strong>. O visual bonito não garante autenticidade — o importante é a procedência e a reputação da loja.</p>
+
+  <p>Uma boa opção para aumentar sua privacidade é utilizar uma <strong>VPN (Rede Privada Virtual)</strong>. Ela cria uma conexão segura e criptografada entre você e a internet, protegendo seus dados contra interceptações, especialmente quando você está em redes públicas.</p>
+
+  <p>Por fim, lembre-se: proteger seus dados pessoais é uma responsabilidade contínua. Evite compartilhar informações sensíveis em redes sociais, não salve senhas em documentos do computador e só forneça dados pessoais em sites confiáveis. A prevenção ainda é a melhor forma de defesa contra as ameaças digitais.</p>
+</div>
+
+         <section id="video-caso">
+        <h2>📺 Dicas para evitar cair em golpes</h2>
+        <p>Assista ao vídeo abaixo para descobrir dicas que vão te fazer evitar ser enganado por golpistas diretamente de um GOLPISTA</p>
+        <div class="video-container">
+            <iframe width="1236" height="695" src="https://www.youtube.com/embed/m0SSxNhUPL4" title="🔒 Golpista Cibernético Revela Seus Truques: Como Se Proteger de Fraudes Online!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+
+
+    <form id="quiz3">
+      <div class="pergunta"><strong>1.</strong> Qual é a prática mais segura ao criar uma senha?<br>
+        <label><input type="radio" name="q3_1" value="1"> Usar senhas longas com letras, números e símbolos</label><br>
+        <label><input type="radio" name="q3_1" value="0"> Reutilizar a mesma senha em vários sites</label><br>
+        <label><input type="radio" name="q3_1" value="0"> Criar senhas curtas e fáceis de lembrar</label>
+      </div>
+
+      <div class="pergunta"><strong>2.</strong> Por que é importante manter o software atualizado?<br>
+        <label><input type="radio" name="q3_2" value="1"> Atualizações corrigem falhas de segurança e vulnerabilidades</label><br>
+        <label><input type="radio" name="q3_2" value="0"> Apenas melhoram a aparência do sistema</label><br>
+        <label><input type="radio" name="q3_2" value="0"> Consomem mais espaço no disco</label>
+      </div>
+
+      <div class="pergunta"><strong>3.</strong> O que é a autenticação de dois fatores (2FA)?<br>
+        <label><input type="radio" name="q3_3" value="1"> Um método que exige uma segunda verificação além da senha</label><br>
+        <label><input type="radio" name="q3_3" value="0"> Um aplicativo de antivírus gratuito</label><br>
+        <label><input type="radio" name="q3_3" value="0"> Um tipo de rede privada virtual</label>
+      </div>
+
+      <div class="pergunta"><strong>4.</strong> Qual atitude deve ser evitada ao receber um e-mail suspeito?<br>
+        
+        <label><input type="radio" name="q3_4" value="0"> Conferir o domínio do remetente</label><br>
+        <label><input type="radio" name="q3_4" value="1"> Clicar em links ou baixar anexos sem verificar o remetente</label><br>
+        <label><input type="radio" name="q3_4" value="0"> Apagar o e-mail imediatamente</label>
+      </div>
+
+      <div class="pergunta"><strong>5.</strong> O que significa “navegação segura” na internet?<br>
+        
+        <label><input type="radio" name="q3_5" value="0"> Navegar em qualquer site desde que o design pareça confiável</label><br>
+        <label><input type="radio" name="q3_5" value="1"> Utilizar sites com HTTPS e certificados válidos</label><br>
+        <label><input type="radio" name="q3_5" value="0"> Usar o modo anônimo apenas</label>
+      </div>
+
+      <div class="pergunta"><strong>6.</strong> O que é um antivírus e qual sua função?<br>
+        <label><input type="radio" name="q3_6" value="1"> Software que detecta, bloqueia e remove ameaças digitais</label><br>
+        <label><input type="radio" name="q3_6" value="0"> Programa que acelera downloads</label><br>
+        <label><input type="radio" name="q3_6" value="0"> Aplicativo usado para limpar histórico de navegação</label>
+      </div>
+
+      <div class="pergunta"><strong>7.</strong> Qual é uma boa prática ao usar Wi-Fi público?<br>
+        
+        <label><input type="radio" name="q3_7" value="0"> Compartilhar o acesso com outros usuários</label><br>
+        <label><input type="radio" name="q3_7" value="0"> Desativar o antivírus para economizar bateria</label><br>
+        <label><input type="radio" name="q3_7" value="1"> Evitar acessar contas bancárias e informações sensíveis</label>
+      </div>
+
+      <div class="pergunta"><strong>8.</strong> Como identificar um site falso de compras?<br>
+        
+        <label><input type="radio" name="q3_8" value="0"> Muitas imagens de produtos e layout moderno</label><br>
+        <label><input type="radio" name="q3_8" value="1"> Preços muito baixos, erros no texto e falta de informações de contato</label><br>
+        <label><input type="radio" name="q3_8" value="0"> Site com domínio “.com”</label>
+      </div>
+
+      <div class="pergunta"><strong>9.</strong> O que é uma VPN e como ela ajuda na segurança?<br>
+        <label><input type="radio" name="q3_9" value="1"> Cria uma conexão segura e criptografada entre o usuário e a internet</label><br>
+        <label><input type="radio" name="q3_9" value="0"> É um antivírus mais potente</label><br>
+        <label><input type="radio" name="q3_9" value="0"> Desativa firewalls para aumentar a velocidade</label>
+      </div>
+
+      <div class="pergunta"><strong>10.</strong> Qual atitude ajuda a proteger seus dados pessoais?<br>
+        
+        <label><input type="radio" name="q3_10" value="0"> Salvar senhas em arquivos do computador</label><br>
+        <label><input type="radio" name="q3_10" value="0"> Publicar dados pessoais em redes sociais privadas</label><br>
+        <label><input type="radio" name="q3_10" value="1"> Compartilhar informações pessoais apenas em sites confiáveis</label>
+      </div>
+
+      <button type="submit" class="botao-form">Enviar</button>
+      <p class="resultado"></p>
+    </form>
+  </div>
+</div>
+
+<!-- 🔹 MÓDULO 04 - Privacidade e proteção de dados pessoais -->
+<div class="modulos">
+  <h3>🔒 Módulo 04 - Privacidade e proteção de dados pessoais</h3>
+  <p>Entenda a importância da privacidade online e aprenda como proteger suas informações pessoais no ambiente digital.</p>
+  <button class="botao-form" onclick="abrirModulo('mod4')">Iniciar</button>
+
+  <div id="mod4" class="conteudo-modulo" style="display:none;">
+    <p>A proteção de dados pessoais é essencial para garantir que suas informações não sejam utilizadas de forma indevida. Saber como gerenciar sua privacidade e reconhecer riscos digitais é fundamental para uma navegação segura.</p>
+
+    <div class="estudo" style="background:#0b0b0b;padding:15px;border-radius:8px;margin-bottom:12px;color:#e6e6e6;">
+    <h4 style="color:#00ff9d;margin-top:0;">Conteúdo de Estudo — Proteção de Dados e Privacidade (LGPD)</h4>
+
+    <p>A <strong>Lei Geral de Proteção de Dados (LGPD)</strong> foi criada para garantir que empresas e organizações tratem informações pessoais com responsabilidade, transparência e segurança. Ela protege os direitos de liberdade e privacidade das pessoas, estabelecendo regras sobre como os dados devem ser coletados, utilizados e armazenados.</p>
+
+    <p>De acordo com a LGPD, um <strong>dado pessoal</strong> é qualquer informação que identifique ou possa identificar uma pessoa, como nome, CPF, endereço, telefone, e-mail, data de nascimento ou número de documentos. Já os <strong>dados sensíveis</strong> são aqueles que exigem maior proteção, por envolverem aspectos íntimos ou que podem gerar discriminação, como origem racial, religião, opiniões políticas, dados de saúde, biometria e orientação sexual.</p>
+
+    <p>O principal objetivo da LGPD é <strong>proteger os direitos fundamentais do cidadão</strong>, assegurando que seus dados não sejam usados de forma abusiva. Para isso, ela impõe responsabilidades tanto para quem coleta e armazena informações quanto para quem fornece seus dados. Empresas e instituições devem manter medidas de segurança, enquanto os usuários precisam estar atentos a suas próprias práticas digitais.</p>
+
+    <p>Entre as atitudes que ajudam a proteger a privacidade online, estão <strong>configurar permissões de aplicativos e redes sociais</strong>, evitando que eles acessem informações desnecessárias; <strong>verificar as permissões de novos aplicativos antes de instalá-los</strong>; e <strong>evitar publicar documentos e informações pessoais</strong> em ambientes públicos ou redes sociais.</p>
+
+    <p>Alguns dados, como <strong>CPF e informações bancárias</strong>, exigem cuidado redobrado, pois seu vazamento pode causar sérios prejuízos financeiros. Se houver suspeita de vazamento de dados, é fundamental <strong>alterar senhas imediatamente, monitorar movimentações em contas</strong> e registrar um <strong>boletim de ocorrência</strong> para se proteger legalmente.</p>
+
+    <p>Ler as <strong>políticas de privacidade</strong> dos sites e aplicativos é outra prática importante. Esses documentos explicam como suas informações são coletadas, armazenadas e compartilhadas — e aceitar sem ler pode significar permitir usos indevidos sem perceber.</p>
+
+    <p>Por fim, vale lembrar que a proteção de dados não é responsabilidade apenas do governo ou das empresas. <strong>Todos nós somos responsáveis</strong> por proteger nossas próprias informações e respeitar as dos outros. Adotar boas práticas de segurança digital é essencial para garantir que a tecnologia sirva como ferramenta de confiança e não como risco à privacidade.</p>
+  </div>
+
+           <section id="video-caso">
+        <h2>📺 O que é a LGPD</h2>
+        <p>Assista ao vídeo abaixo para entender mais sobre a LGPD</p>
+        <div class="video-container">
+            <iframe width="1236" height="695" src="https://www.youtube.com/embed/OIPqTk0fQGs" title="Minuto LGPD - O que é a Lei Geral de Proteção de Dados Pessoais?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+
+
+    <form id="quiz4">
+      <div class="pergunta"><strong>1.</strong> O que é considerado dado pessoal segundo a LGPD?<br>
+       
+        <label><input type="radio" name="q4_1" value="0"> Apenas dados financeiros</label><br>
+        <label><input type="radio" name="q4_1" value="1"> Qualquer informação que identifique ou possa identificar uma pessoa</label><br>
+        <label><input type="radio" name="q4_1" value="0"> Somente dados de empresas públicas</label>
+      </div>
+
+      <div class="pergunta"><strong>2.</strong> O que são dados sensíveis?<br>
+        <label><input type="radio" name="q4_2" value="0"> Dados de acesso a redes sociais</label><br>
+        <label><input type="radio" name="q4_2" value="0"> Informações sobre histórico de navegação</label><br>
+        <label><input type="radio" name="q4_2" value="1"> Informações sobre origem racial, saúde, religião, política, entre outros</label>
+      </div>
+
+      <div class="pergunta"><strong>3.</strong> Qual é o principal objetivo da LGPD?<br>
+        <label><input type="radio" name="q4_3" value="0"> Controlar o acesso das empresas à internet</label><br>
+        <label><input type="radio" name="q4_3" value="1"> Proteger os direitos fundamentais de liberdade e privacidade das pessoas</label><br>
+        <label><input type="radio" name="q4_3" value="0"> Aumentar o número de servidores públicos</label>
+      </div>
+
+      <div class="pergunta"><strong>4.</strong> Qual destas práticas contribui para proteger a privacidade online?<br>
+        <label><input type="radio" name="q4_4" value="1"> Configurar permissões de aplicativos e redes sociais</label><br>
+        <label><input type="radio" name="q4_4" value="0"> Compartilhar senhas com familiares</label><br>
+        <label><input type="radio" name="q4_4" value="0"> Clicar em todos os links recebidos por e-mail</label>
+      </div>
+
+      <div class="pergunta"><strong>5.</strong> O que fazer ao baixar um aplicativo novo?<br>
+        <label><input type="radio" name="q4_5" value="1"> Verificar permissões solicitadas e avaliar se são necessárias</label><br>
+        <label><input type="radio" name="q4_5" value="0"> Conceder todas as permissões automaticamente</label><br>
+        <label><input type="radio" name="q4_5" value="0"> Ignorar a política de privacidade</label>
+      </div>
+
+      <div class="pergunta"><strong>6.</strong> Qual informação é mais sensível e requer cuidado especial?<br>
+        
+        <label><input type="radio" name="q4_6" value="0"> Endereço de e-mail profissional</label><br>
+        <label><input type="radio" name="q4_6" value="0"> Nome do dispositivo usado</label><br>
+        <label><input type="radio" name="q4_6" value="1"> Número do CPF e dados bancários</label>
+      </div>
+
+      <div class="pergunta"><strong>7.</strong> Qual atitude demonstra falta de cuidado com dados pessoais?<br>
+     
+        <label><input type="radio" name="q4_7" value="0"> Utilizar senhas fortes e únicas</label><br>
+           <label><input type="radio" name="q4_7" value="1"> Publicar documentos em redes sociais</label><br>
+        <label><input type="radio" name="q4_7" value="0"> Evitar uso de Wi-Fi público</label>
+      </div>
+
+      <div class="pergunta"><strong>8.</strong> Por que é importante ler políticas de privacidade?<br>
+        <label><input type="radio" name="q4_8" value="1"> Para entender como seus dados serão usados e armazenados</label><br>
+        <label><input type="radio" name="q4_8" value="0"> Porque são obrigatórias por lei, mas sem relevância prática</label><br>
+        <label><input type="radio" name="q4_8" value="0"> Para liberar mais espaço no dispositivo</label>
+      </div>
+
+      <div class="pergunta"><strong>9.</strong> O que fazer se seus dados forem expostos em um vazamento?<br>
+        <label><input type="radio" name="q4_9" value="1"> Alterar senhas, monitorar contas e registrar boletim de ocorrência</label><br>
+        <label><input type="radio" name="q4_9" value="0"> Ignorar, pois é algo comum</label><br>
+        <label><input type="radio" name="q4_9" value="0"> Compartilhar nas redes sociais</label>
+      </div>
+
+      <div class="pergunta"><strong>10.</strong> Quem é responsável por garantir a proteção de dados pessoais?<br>
+    
+        <label><input type="radio" name="q4_10" value="0"> Apenas o governo federal</label><br>
+            <label><input type="radio" name="q4_10" value="1"> Todos os usuários e as empresas que tratam informações</label><br>
+        <label><input type="radio" name="q4_10" value="0"> Somente o dono dos dados</label>
+      </div>
+
+      <button type="submit" class="botao-form">Enviar</button>
+      <p class="resultado"></p>
+    </form>
+  </div>
+</div>
+
+      
+    </div>
+  </section>
+
+  <script>
+    function abrirModulo(id) {
+  const modulo = document.getElementById(id);
+
+  // Exibe o módulo
+  modulo.style.display = "block";
+
+  // Faz a rolagem suave até ele
+  modulo.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+    document.querySelectorAll("form").forEach(form => {
+      form.addEventListener("submit", function(e){
+        e.preventDefault();
+        let score = 0;
+        const radios = this.querySelectorAll("input[type='radio']:checked");
+        radios.forEach(r => score += parseInt(r.value));
+        const total = this.querySelectorAll(".pergunta").length;
+        const resultado = this.querySelector(".resultado");
+        if(score === total){
+          resultado.textContent = `✅ Parabéns! Você acertou todas as ${total} perguntas!`;
+          resultado.style.color = "#00ff9d";
+        } else if(score >= total / 2){
+          resultado.textContent = `⚠️ Você acertou ${score} de ${total}. Continue estudando!`;
+          resultado.style.color = "#ffcc00";
+        } else {
+          resultado.textContent = `❌ Você acertou apenas ${score} de ${total}. Tente novamente!`;
+          resultado.style.color = "#ff6666";
+        }
+        setTimeout(() => {
+          this.parentElement.style.display = "none";
+        }, 3000);
+      });
+    });
+  </script>
+
+</body>
+</html>
