@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Questionário Final - Segurança Digital</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    /* Estilo geral */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0b0b0b;
+      color: #e6e6e6;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #00ff9d;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 1.1em;
+      margin-bottom: 30px;
+      color: #aaa;
+    }
+
+    .quiz-container {
+      background: #1a1a1a;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 255, 157, 0.1);
+    }
+
+    .pergunta {
+      margin-bottom: 20px;
+      padding: 15px;
+      background: #0f0f0f;
+      border-radius: 8px;
+      border-left: 4px solid #00ff9d;
+    }
+
+    .pergunta strong {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 1.1em;
+      color: #00ff9d;
+    }
+
+    .opcoes label {
+      display: block;
+      margin: 8px 0;
+      padding: 10px;
+      background: #222;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .opcoes label:hover {
+      background: #333;
+    }
+
+    .opcoes input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    .botoes {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .botao-form {
+      background: #00ff9d;
+      color: #0b0b0b;
+      border: none;
+      padding: 12px 30px;
+      font-size: 1.1em;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .botao-form:hover {
+      background: #00cc7a;
+      transform: translateY(-2px);
+    }
+
+    .botao-form:disabled {
+      background: #555;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* Popup */
+    .popup {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s;
+    }
+
+    .popup.mostrar {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .popup-conteudo {
+      background: #1a1a1a;
+      padding: 40px;
+      border-radius: 16px;
+      text-align: center;
+      max-width: 400px;
+      transform: scale(0.8);
+      transition: transform 0.4s;
+      box-shadow: 0 0 30px rgba(0, 255, 157, 0.3);
+    }
+
+    .popup.mostrar .popup-conteudo {
+      transform: scale(1);
+    }
+
+    .popup h2 {
+      margin: 0 0 15px;
+      font-size: 2em;
+    }
+
+    .aprovado h2 { color: #00ff9d; }
+    .reprovado h2 { color: #ff6666; }
+
+    .popup p {
+      margin: 15px 0;
+      font-size: 1.1em;
+    }
+
+    .popup .botao-form {
+      margin-top: 20px;
+    }
+
+    /* Responsivo */
+    @media (max-width: 600px) {
+      .container { padding: 15px; }
+      .pergunta { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Questionário Final de Cibersegurança</h1>
+    <p class="subtitle">Responda às 20 questões. Você precisa de <strong>14 acertos</strong> para ser aprovado.</p>
+
+  <div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
+    <a href= index.html><button class="botao-form"> Voltar ao inicio</button></a>
+
+
+    
+  </div>
+
+  <div class="nome-usuario" style="text-align:center; margin:30px 0;">
+  <label for="nomeUsuario" style="display:block; margin-bottom:10px; font-weight:bold; color:#00ff9d;">
+    Digite seu nome completo:
+  </label>
+  <input type="text" id="nomeUsuario" placeholder="Ex: João Vitor da Silva" 
+         style="padding:12px; width:300px; border-radius:8px; border:1px solid #00ff9d; background:#222; color:#e6e6e6; text-align:center; font-size:1em;" 
+         required />
+</div>
+
+    <div class="quiz-container">
+      <form id="quizFinal">
+        <!-- === 20 QUESTÕES === -->
+        <div class="pergunta">
+          <strong>1. O que é credential stuffing?</strong>
+          <div class="opcoes">
+            <label><input type="radio" name="q1" value="0"> Ataque de força bruta em tempo real</label>
+            <label><input type="radio" name="q1" value="1"> Reutilização de credenciais vazadas em outros sites</label>
+            <label><input type="radio" name="q1" value="0"> Envio de e-mails falsos</label>
+            <label><input type="radio" name="q1" value="0"> Clonagem de cartão</label>
+          </div>
+        </div>
+
+        <div class="pergunta">
+          <strong>2. Qual é a melhor prática contra SIM swapping?</strong>
+          <div class="opcoes">
+            <label><input type="radio" name="q2" value="0"> Usar SMS como 2FA</label>
+            <label><input type="radio" name="q2" value="1"> Usar app autenticador (Google Authenticator)</label>
+            <label><input type="radio" name="q2" value="0"> Compartilhar código com amigos</label>
+            <label><input type="radio" name="q2" value="0"> Desativar 2FA</label>
+          </div>
+        </div>
+
+        <div class="pergunta">
+          <strong>3. Qual protocolo VPN é o mais seguro em 2025?</strong>
+          <div class="opcoes">
+            <label><input type="radio" name="q3" value="0"> PPTP</label>
+            <label><input type="radio" name="q3" value="1"> WireGuard</label>
+            <label><input type="radio" name="q3" value="0"> L2TP</label>
+            <label><input type="radio" name="q3" value="0"> OpenVPN (obsoleto)</label>
+          </div>
+        </div>
+
+        <div class="pergunta">
+          <strong>4. O que é FIDO2?</strong>
+          <div class="opcoes">
+            <label><input type="radio" name="q4" value="0"> Um tipo de firewall</label>
+            <label><input type="radio" name="q4" value="1"> Autenticação sem senha com chaves criptográficas</label>
+            <label><input type="radio" name="q4" value="0"> Um antivírus</label>
+            <label><input type="radio" name="q4" value="0"> Um protocolo de e-mail</label>
+          </div>
+        </div>
+
+        <div class="pergunta">
+          <strong>5. Qual algoritmo NÃO deve ser usado para hash de senhas?</strong>
+          <div class="opcoes">
+            <label><input type="radio" name="q5" value="1"> MD5</label>
+            <label><input type="radio" name="q5" value="0"> Argon2</label>
+            <label><input type="radio" name="q5" value="0"> bcrypt</label>
+            <label><input type="radio" name="q5" value="0"> PBKDF2</label>
+          </div>
+        </div>
+
+        <div class="pergunta">
+          <strong>6. O que é BEC (Business Email Compromise)?</strong>
+          <div class="opcoes">
+            <label><input type="radio" name="q6" value="0"> E-mail com vírus</label>
+            <label><input type="radio" name="q6" value="1"> E-mail falso do CEO pedindo transferência</label>
+            <label><input type="radio" name="q6" value="0"> Propaganda</label>
+            <label><input type="radio" name="q6" value="0"> Newsletter</label>
+          </div>
+        </div>
+
+        <div class="pergunta">
+          <strong>7. Qual é o risco do WPS em roteadores?</strong>
+          <div class="opcoes">
+            <label><input type="radio" name="q7" value="0"> Consome muita energia</label>
+            <label><input type="radio" name="q7" value="1"> PIN de 8 dígitos vulnerável a força bruta</label>
+            <label><input type="radio" name="q7" value="0"> Desativa o Wi-Fi</label>
+            <label><input type="radio" name="q7" value="0"> Bloqueia dispositivos</label>
+          </div>
+        </div>
+
+        <div class="pergunta">
+          <strong>8. O que é ZTNA?</strong>
+          <div class="opcoes">
+            <label><input type="radio" name="q8" value="0"> Um tipo de firewall</label>
+            <label><input type="radio" name="q8" value="1"> Acesso de rede com verificação contínua (Zero Trust)</label>
+            <label><input type="radio" name="q8" value="0"> Um antivírus</label>
+            <label><input type="radio" name="q8" value="0"> Um protocolo de e-mail</label>
+          </div>
+        </div>
+
+        <div class="pergunta">
+          <strong>9. Qual é o padrão de criptografia em repouso recomendado?</strong>
+          <div class="opcoes">
+            <label><input type="radio" name="q9" value="0"> DES</label>
+            <label><input type="radio" name="q9" value="1"> AES-256</label>
+            <label><input type="radio" name="q9" value="0"> RSA</label>
+            <label><input type="radio" name="q9" value="0"> 3DES</label>
+          </div>
+        </div>
+
+        <div class="pergunta">
+          <strong>10. O que é OSINT?</strong>
+          <div class="opcoes">
+            <label><input type="radio" name="q10" value="0"> Um tipo de vírus</label>
+            <label><input type="radio" name="q10" value="1"> Coleta de informações públicas (Open Source Intelligence)</label>
+            <label><input type="radio" name="q10" value="0"> Um firewall</label>
+            <label><input type="radio" name="q10" value="0"> Um protocolo</label>
+          </div>
+        </div>
+
+        <!-- Continue com as outras 10 questões abaixo (mesmo padrão) -->
+        <div class="pergunta">
+          <strong>11. Qual é o risco de redes Wi-Fi públicas?</strong>
+          <div class="opcoes">
+            <label><input type="radio" name="q11" value="1"> Interceptação (MITM)</label>
+            <label><input type="radio" name="q11" value="0"> Velocidade lenta</label>
+            <label><input type="radio" name="q11" value="0"> Bloqueio de sites</label>
+            <label><input type="radio" name="q11" value="0"> Anúncios</label>
+          </div>
+        </div>
+
+        <div class="pergunta">
+          <strong>12. O que é tokenização?</strong>
+          <div class="opcoes">
+            <label><input type="radio" name="q12" value="0"> Criptografar dados</label>
+            <label><input type="radio" name="q12" value="1"> Substituir dados sensíveis por tokens aleatórios</label>
+            <label><input type="radio" name="q12" value="0"> Compactar arquivos</label>
+            <label><input type="radio" name="q12" value="0"> Fazer backup</label>
+          </div>
+        </div>
+
+        <div class="pergunta">
+          <strong>13. Qual é a função do HSM?</strong>
+          <div class="opcoes">
+            <label><input type="radio" name="q13" value="0"> Monitorar rede</label>
+            <label><input type="radio" name="q13" value="1"> Armazenar chaves criptográficas com segurança física</label>
+            <label><input type="radio" name="q13" value="0"> Bloquear IPs</label>
+            <label><input type="radio" name="q13" value="0"> Fazer backup</label>
+          </div>
+        </div>
+
+        <div class="pergunta">
+          <strong>14. O que é vishing com IA?</strong>
+          <div class="opcoes">
+            <label><input type="radio" name="q14" value="0"> E-mail falso</label>
+            <label><input type="radio" name="q14" value="1"> Ligação com voz clonada por IA</label>
+            <label><input type="radio" name="q14" value="0"> SMS falso</label>
+            <label><input type="radio" name="q14" value="0"> Pop-up</label>
+          </div>
+        </div>
+
+        <div class="pergunta">
+          <strong>15. Qual é o princípio do Zero Trust?</strong>
+          <div class="opcoes">
+            <label><input type="radio" name="q15" value="0"> Confiar em todos na rede interna</label>
+            <label><input type="radio" name="q15" value="1"> Nunca confie, sempre verifique</label>
+            <label><input type="radio" name="q15" value="0"> Só verificar na entrada</label>
+            <label><input type="radio" name="q15" value="0"> Desativar firewall</label>
+          </div>
+        </div>
+
+        <div class="pergunta">
+          <strong>16. O que é TDE?</strong>
+          <div class="opcoes">
+            <label><input type="radio" name="q16" value="0"> Criptografia de e-mail</label>
+            <label><input type="radio" name="q16" value="1"> Transparent Data Encryption em bancos de dados</label>
+            <label><input type="radio" name="q16" value="0"> Um antivírus</label>
+            <label><input type="radio" name="q16" value="0"> Um protocolo</label>
+          </div>
+        </div>
+
+        <div class="pergunta">
+          <strong>17. Qual é o risco de senhas reutilizadas?</strong>
+          <div class="opcoes">
+            <label><input type="radio" name="q17" value="1"> Comprometimento em cascata</label>
+            <label><input type="radio" name="q17" value="0"> Esquecer a senha</label>
+            <label><input type="radio" name="q17" value="0"> Bloqueio de conta</label>
+            <label><input type="radio" name="q17" value="0"> Lentidão</label>
+          </div>
+        </div>
+
+        <div class="pergunta">
+          <strong>18. O que é hardening de roteador?</strong>
+          <div class="opcoes">
+            <label><input type="radio" name="q18" value="0"> Aumentar potência</label>
+            <label><input type="radio" name="q18" value="1"> Configurar segurança (desativar WPS, mudar senha, WPA3)</label>
+            <label><input type="radio" name="q18" value="0"> Atualizar firmware</label>
+            <label><input type="radio" name="q18" value="0"> Reiniciar</label>
+          </div>
+        </div>
+
+        <div class="pergunta">
+          <strong>19. Qual é o futuro da criptografia?</strong>
+          <div class="opcoes">
+            <label><input type="radio" name="q19" value="0"> RSA</label>
+            <label><input type="radio" name="q19" value="1"> Criptografia pós-quântica (lattice-based)</label>
+            <label><input type="radio" name="q19" value="0"> MD5</label>
+            <label><input type="radio" name="q19" value="0"> DES</label>
+          </div>
+        </div>
+
+        <div class="pergunta">
+          <strong>20. Qual é a melhor defesa contra engenharia social?</strong>
+          <div class="opcoes">
+            <label><input type="radio" name="q20" value="0"> Antivírus</label>
+            <label><input type="radio" name="q20" value="1"> Verificação multifonte e treinamento</label>
+            <label><input type="radio" name="q20" value="0"> Firewall</label>
+            <label><input type="radio" name="q20" value="0"> VPN</label>
+          </div>
+        </div>
+
+        <div class="botoes">
+          <button type="submit" class="botao-form">Finalizar Questionário</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+<!-- Popup Aprovado/Reprovado -->
+<div id="popup" class="popup">
+  <div class="popup-conteudo" id="popupConteudo">
+    <h2 id="popupTitulo"></h2>
+    <p id="popupMensagem"></p>
+    <div id="botoesPopup"></div>
+  </div>
+</div>
+
+
+
+<script>
+  const form = document.getElementById('quizFinal');
+  const popup = document.getElementById('popup');
+  const popupTitulo = document.getElementById('popupTitulo');
+  const popupMensagem = document.getElementById('popupMensagem');
+  const botoesPopup = document.getElementById('botoesPopup');
+  const nomeInput = document.getElementById('nomeUsuario');
+
+  // Data formatada (BR)
+  function dataBR() {
+    return new Date().toLocaleDateString('pt-BR', { 
+      day: '2-digit', month: '2-digit', year: 'numeric', 
+      hour: '2-digit', minute: '2-digit' 
+    });
+  }
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    let todosRespondidos = true;
+    for (let i = 1; i <= 20; i++) {
+        if (!document.querySelector(`input[name="q${i}"]:checked`)) {
+            todosRespondidos = false;
+            break;
+        }
+    }
+
+    const nome = nomeInput.value.trim();
+    if (!nome) {
+      alert('Por favor, digite seu nome completo.');
+      return;
+    }
+    
+    if (!todosRespondidos) {
+        alert('Por favor, responda a todas as 20 questões antes de finalizar.');
+        return;
+    }
+
+    let acertos = 0;
+    for (let i = 1; i <= 20; i++) {
+      const resposta = document.querySelector(`input[name="q${i}"]:checked`);
+      if (resposta && resposta.value === "1") acertos++;
+    }
+
+    const aprovado = acertos >= 14;
+    const dataEmissao = dataBR();
+
+    if (aprovado) {
+      document.getElementById('popupConteudo').className = 'popup-conteudo aprovado';
+      popupTitulo.textContent = 'Aprovado!';
+      popupMensagem.innerHTML = `
+        Parabéns, <strong>${nome}</strong>!<br>
+        Você acertou <strong>${acertos}/20</strong> e foi aprovado(a).<br><br>
+        <small>Data: ${dataEmissao}</small>
+      `;
+
+      botoesPopup.innerHTML = `
+        <button class="botao-form" onclick="reiniciarQuiz()">
+          Novo Teste
+        </button>
+      `;
+    } else {
+      document.getElementById('popupConteudo').className = 'popup-conteudo reprovado';
+      popupTitulo.textContent = 'Reprovado';
+      popupMensagem.innerHTML = `
+        <strong>${nome}</strong>, você acertou <strong>${acertos}/20</strong>.<br>
+        Estude mais e tente novamente.
+      `;
+      botoesPopup.innerHTML = `
+        <button class="botao-form" style="background:#333;" onclick="reiniciarQuiz()">
+          Tentar Novamente
+        </button>
+      `;
+    }
+
+    popup.classList.add('mostrar');
+    document.body.style.overflow = 'hidden';
+  });
+
+  function fecharPopup() {
+    popup.classList.remove('mostrar');
+    document.body.style.overflow = 'auto';
+  }
+
+  function reiniciarQuiz() {
+    fecharPopup();
+    form.reset();
+    nomeInput.value = '';
+    window.scrollTo(0, 0);
+  }
+
+  // Fechar popup com tecla ESC
+  document.addEventListener('keydown', e => e.key === 'Escape' && fecharPopup());
+</script>
+
+
+
+<style>
+    footer {
+    text-align: center;
+    padding: 20px;
+    background: #00ff9d;
+    color: #000;
+    margin-top: 40px;
+}
+</style>
+    <footer>
+        <p>Projeto de Extensão — Navegar com segurança | 2025</p>
+    </footer>
+
+
+</body>
+</html>
