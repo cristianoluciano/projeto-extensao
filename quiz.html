@@ -156,6 +156,8 @@
 </section>
 
 
+
+
 <script>
   const botaoMostrar = document.getElementById("mostrarForm");
   const formulario = document.getElementById("formulario");
@@ -180,7 +182,7 @@
     }
 
     const resultado = document.getElementById("resultado");
-    if (acertos >= 10) {
+    if (acertos >= 8) {
       resultado.textContent = `Você acertou ${acertos}/15. Perfil: Intermediário em Cibersegurança 🔐`;
       resultado.style.color = "#00ff9d";
     } else {

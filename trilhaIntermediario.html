@@ -1,0 +1,508 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Trilha Intermediaria</title>
+  <style>
+    /* 🔽 AJUSTE DE LAYOUT: módulos empilhados */
+    .container-modulos {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .modulos {
+      width: 96%;
+      background: rgba(0, 255, 157, 0.08);
+      padding: 20px;
+      border-left: 4px solid #00ff9d;
+      border-radius: 10px;
+      color: white;
+      box-shadow: 0 0 10px rgba(0, 255, 157, 0.1);
+      transition: 0.3s;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo"><img src="assets/Gemini_Generated_Image_8ipore8ipore8ipo.png" style="width: 100px;" alt="Logo"></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="aprenda.html" style="color:#00ff9d;">Aprenda</a></li>
+      <li><a href="#">Serviços</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+    <div class="menu-toggle" id="menuToggle">&#9776;</div>
+  </nav>
+
+  <!-- SCRIPT NAVBAR MOBILE -->
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
+  </script>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="overlay"></div>
+    <div class="conteudo-hero">
+      <h1 class="animar">Aprenda a se proteger no mundo digital<br> <span style="color: #00ff9d;">Bem-Vindo(a) a Trilha intermediária</h1>
+      <p>Conheça os principais conceitos de cibersegurança e aprenda como evitar golpes cibernéticos de forma simples e eficaz.</p>
+    </div>
+  </header>
+
+  <!-- SEÇÃO DE CONTEÚDO PRINCIPAL -->
+  <section id="conteudo-aprendizado">
+    <h2>Módulos de Aprendizado</h2>
+    <p>Clique em um módulo para iniciar o aprendizado sobre cibersegurança.</p>
+
+    <div class="container-modulos">
+
+      <!-- MÓDULO 01 -->
+      <div class="modulos">
+        <h3>🔐 Módulo 01 - Gerenciamento Avançado de Senhas e Autenticação</h3>
+        <p>Explore técnicas intermediárias para criar, armazenar e gerenciar senhas complexas, além de configurar autenticação multifator robusta.</p>
+        <button class="botao-form" onclick="abrirModulo('mod1')">Iniciar</button>
+
+        <div id="mod1" class="conteudo-modulo" style="display:none;">
+          <p>O gerenciamento de senhas vai além de criar combinações fortes; envolve o uso de gerenciadores e estratégias para autenticação segura em múltiplos serviços.</p>
+
+          <!-- 🔹 Texto de Estudo -->
+
+<div class="estudo" style="background:#0b0b0b;padding:15px;border-radius:8px;margin-bottom:12px;color:#e6e6e6;">
+  <h4 style="color:#00ff9d;margin-top:0;">Conteúdo de Estudo — Gerenciamento Avançado de Senhas e Autenticação</h4>
+
+  <p>O gerenciamento de senhas é o alicerce da segurança digital moderna. Senhas fracas ou reutilizadas são responsáveis por mais de 80% das violações de contas em 2025. Um <strong>gerenciador de senhas</strong> (como Bitwarden, 1Password ou LastPass) resolve isso ao armazenar todas as suas credenciais em um cofre criptografado com AES-256, acessível apenas com uma senha-mestre forte. Ele gera automaticamente senhas complexas de <strong>mínimo 16 caracteres</strong>, incluindo letras maiúsculas, minúsculas, números e símbolos especiais (ex.: <code>K7#mP9$xL2@qW8!</code>). Isso impede ataques de força bruta e dicionário, que são automatizados e testam milhões de combinações por segundo.</p>
+
+  <p>Reutilizar senhas é um erro fatal: se um site for hackeado, os atacantes usam <strong>credential stuffing</strong> — ferramentas como Sentry MBA ou OpenBullet — para testar automaticamente as mesmas credenciais em centenas de outros serviços (bancos, e-mails, redes sociais). Um gerenciador elimina isso ao garantir que <strong>cada conta tenha uma senha única e aleatória</strong>. Além disso, sincroniza entre celular, computador e tablet, com autenticação biométrica (impressão digital ou Face ID) para acesso rápido e seguro.</p>
+
+  <p>A <strong>autenticação multifator (MFA)</strong> é a segunda camada essencial. Ela exige <strong>pelo menos dois fatores</strong>: algo que você sabe (senha), algo que você tem (celular ou chave física) ou algo que você é (biometria). O SMS é comum, mas <strong>extremamente vulnerável ao SIM swapping</strong>: o atacante liga para a operadora, se passa por você com dados vazados (CPF, nome da mãe) e transfere seu número para um chip dele. A partir daí, intercepta todos os códigos 2FA. A solução segura é usar <strong>aplicativos autenticadores como Google Authenticator, Microsoft Authenticator ou Authy</strong>, que geram códigos a cada 30 segundos sem precisar de internet, ou melhor ainda: <strong>chaves de hardware como YubiKey ou Titan Security Key</strong>, que se conectam via USB ou NFC e exigem toque físico.</p>
+
+  <p>O futuro da autenticação é o <strong>FIDO2/WebAuthn</strong>, padrão adotado por Google, Microsoft e Apple. Ele elimina senhas completamente, usando <strong>chaves criptográficas assimétricas</strong>: a chave privada fica no dispositivo (celular ou YubiKey), e a pública no servidor. Ao logar, o site envia um desafio criptográfico que só seu dispositivo pode responder. Isso torna <strong>impossível phishing, força bruta ou roubo de senha</strong>, pois a chave privada nunca sai do hardware. Bancos e governos já estão migrando para esse modelo em 2025.</p>
+
+  <p>Outras práticas avançadas incluem: <strong>monitorar vazamentos com Have I Been Pwned</strong> (insira seu e-mail e receba alertas se aparecer em breaches), <strong>rotacionar senhas de contas críticas a cada 90 dias</strong> (banco, e-mail corporativo), e em empresas, aplicar <strong>políticas de senha</strong> com bloqueio após 5 tentativas erradas, expiração forçada e proibição de senhas comuns (como “123456” ou “admin2025”). Em resumo, a combinação de gerenciador de senhas, MFA robusta, FIDO2 e higiene digital forma uma defesa impenetrável contra os vetores mais comuns de ataque em 2025.</p>
+</div>
+
+     <section id="video-caso">
+        <h2>Gerenciador de Senhas</h2>
+        <p>Assista ao vídeo abaixo para entender como funciona um Gerenciador de Senhas</p>
+        <div class="video-container">
+            <iframe width="1236" height="695" src="https://www.youtube.com/embed/2uZBf4xaPug" title="GERENCIADOR DE SENHAS: é seguro?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+
+
+          <form id="quiz1">
+            <div class="pergunta"><strong>1.</strong> Qual é a principal vantagem de um gerenciador de senhas?<br>
+              <label><input type="radio" name="q1_1" value="0"> Armazenar senhas em texto plano para acesso rápido</label><br>
+              <label><input type="radio" name="q1_1" value="1"> Gerar e armazenar senhas complexas de forma criptografada</label><br>
+              <label><input type="radio" name="q1_1" value="0"> Compartilhar senhas facilmente com equipes</label>
+            </div>
+
+            <div class="pergunta"><strong>2.</strong> Por que evitar SMS na autenticação multifator?<br>
+              <label><input type="radio" name="q1_2" value="1"> Vulnerável a ataques de SIM swapping</label><br>
+              <label><input type="radio" name="q1_2" value="0"> Mais rápido que apps autenticadores</label><br>
+              <label><input type="radio" name="q1_2" value="0"> Não requer conexão à internet</label>
+            </div>
+
+            <div class="pergunta"><strong>3.</strong> Qual comprimento mínimo recomendado para senhas geradas?<br>
+              <label><input type="radio" name="q1_3" value="0"> 8 caracteres</label><br>
+              <label><input type="radio" name="q1_3" value="1"> 16 caracteres com variações</label><br>
+              <label><input type="radio" name="q1_3" value="0"> 12 caracteres apenas números</label>
+            </div>
+
+            <div class="pergunta"><strong>4.</strong> O que é credential stuffing?<br>
+              <label><input type="radio" name="q1_4" value="1"> Uso de credenciais vazadas em múltiplos serviços</label><br>
+              <label><input type="radio" name="q1_4" value="0"> Criação manual de senhas fortes</label><br>
+              <label><input type="radio" name="q1_4" value="0"> Armazenamento local de tokens</label>
+            </div>
+
+            <div class="pergunta"><strong>5.</strong> Qual ferramenta é preferida para MFA segura?<br>
+              <label><input type="radio" name="q1_5" value="1"> Apps como Google Authenticator ou Authy</label><br>
+              <label><input type="radio" name="q1_5" value="0"> E-mail de recuperação</label><br>
+              <label><input type="radio" name="q1_5" value="0"> Perguntas de segurança</label>
+            </div>
+
+            <div class="pergunta"><strong>6.</strong> O que é FIDO2/WebAuthn?<br>
+              <label><input type="radio" name="q1_6" value="0"> Protocolo de criptografia de e-mails</label><br>
+              <label><input type="radio" name="q1_6" value="1"> Autenticação sem senha usando chaves criptográficas</label><br>
+              <label><input type="radio" name="q1_6" value="0"> Gerenciador de senhas open-source</label>
+            </div>
+
+            <div class="pergunta"><strong>7.</strong> Como monitorar vazamentos de senhas?<br>
+              <label><input type="radio" name="q1_7" value="1"> Usar serviços como Have I Been Pwned</label><br>
+              <label><input type="radio" name="q1_7" value="0"> Verificar manualmente em bancos de dados</label><br>
+              <label><input type="radio" name="q1_7" value="0"> Ignorar, pois é raro</label>
+            </div>
+
+            <div class="pergunta"><strong>8.</strong> Qual prática deve ser evitada em políticas de senha?<br>
+              <label><input type="radio" name="q1_8" value="0"> Rotação periódica em contas críticas</label><br>
+              <label><input type="radio" name="q1_8" value="1"> Reutilização de senhas entre serviços</label><br>
+              <label><input type="radio" name="q1_8" value="0"> Bloqueio após tentativas falhas</label>
+            </div>
+
+            <div class="pergunta"><strong>9.</strong> O que um YubiKey proporciona?<br>
+              <label><input type="radio" name="q1_9" value="1"> Autenticação hardware resistente a phishing</label><br>
+              <label><input type="radio" name="q1_9" value="0"> Armazenamento ilimitado de senhas</label><br>
+              <label><input type="radio" name="q1_9" value="0"> Backup automático de MFA</label>
+            </div>
+
+            <div class="pergunta"><strong>10.</strong> Qual é o risco de senhas fracas?<br>
+              <label><input type="radio" name="q1_10" value="0"> Aumento de desempenho do sistema</label><br>
+              <label><input type="radio" name="q1_10" value="1"> Facilitação de ataques de força bruta e breaches</label><br>
+              <label><input type="radio" name="q1_10" value="0"> Redução de complexidade de login</label>
+            </div>
+
+            <button type="submit" class="botao-form">Enviar</button>
+            <p class="resultado"></p>
+          </form>
+        </div>
+      </div>
+
+      <!-- MÓDULO 02 -->
+      <div class="modulos">
+        <h3>⚠️ Módulo 02 - Ataques de Engenharia Social Avançada</h3>
+        <p>Identifique táticas sofisticadas de manipulação psicológica, como spear-phishing e pretexting, usadas por atacantes em 2025.</p>
+        <button class="botao-form" onclick="abrirModulo('mod2')">Iniciar</button>
+
+        <div id="mod2" class="conteudo-modulo" style="display:none;">
+          <p>A engenharia social evoluiu com IA e dados públicos, permitindo ataques personalizados que exploram confiança e urgência.</p>
+
+
+<div class="estudo" style="background:#0b0b0b;padding:15px;border-radius:8px;margin-bottom:12px;color:#e6e6e6;">
+  <h4 style="color:#00ff9d;margin-top:0;">Conteúdo de Estudo — Ataques de Engenharia Social Avançada</h4>
+
+  <p>A engenharia social é a arte de manipular pessoas para revelar informações ou realizar ações perigosas. Em 2025, ela é responsável por <strong>cerca de 90% das violações de dados</strong>, segundo relatórios da Verizon e IBM. O <strong>spear-phishing</strong> é a forma mais sofisticada: o atacante pesquisa a vítima em redes sociais, LinkedIn, sites corporativos e usa <strong>OSINT (Open Source Intelligence)</strong> para coletar dados públicos (aniversário, nome do cachorro, cargo). Com isso, envia um e-mail personalizado: “Oi João, vi que você é gerente de TI na Empresa X. Anexo o relatório de segurança que discutimos na conferência.” O anexo contém ransomware ou spyware.</p>
+
+  <p>O <strong>vishing (voice phishing)</strong> evoluiu com IA: usando apenas 3 segundos de áudio de uma reunião gravada ou vídeo no YouTube, ferramentas como Respeecher ou ElevenLabs clonam a voz do chefe, do banco ou de um familiar. A vítima recebe uma ligação: “Aqui é o Dr. Silva, do hospital. Sua mãe sofreu um acidente e precisa de transferência urgente para cirurgia.” A pressão emocional faz a pessoa agir sem pensar. Esse ataque já causou prejuízos de milhões em 2025.</p>
+
+  <p>O <strong>pretexting</strong> cria um cenário falso completo: um golpista liga se passando por suporte técnico da Microsoft: “Detectamos um vírus crítico no seu PC. Se não agirmos agora, todos os seus arquivos serão apagados.” Ele convence a vítima a instalar AnyDesk ou TeamViewer, dando acesso remoto total. Já o <strong>BEC (Business Email Compromise)</strong> compromete o e-mail do CEO (via senha fraca ou phishing) e envia mensagens para o financeiro: “Aprovar transferência de R$ 500.000 para fornecedor urgente. Assinado, Diretor.” Sem verificação, o dinheiro some.</p>
+
+  <p>Outras táticas incluem: <strong>baiting</strong> (deixar um pen drive rotulado “Salários 2025” na copa da empresa — ao plugar, instala malware), <strong>quid pro quo</strong> (oferecer ajuda técnica gratuita em troca de acesso) e <strong>tailgating</strong> (seguir um funcionário autorizado para entrar em área restrita). Todas exploram <strong>urgência artificial</strong>: “Faça agora ou perca tudo!” Isso desativa o pensamento crítico.</p>
+
+  <p>A defesa é simples, mas poderosa: <strong>verificação multifonte</strong>. Nunca aja com base em um único canal. Recebeu um e-mail urgente do chefe? Ligue para ele usando o número do crachá ou ramal interno, nunca o do e-mail. O princípio do <strong>zero trust</strong> (“nunca confie, sempre verifique”) é obrigatório em empresas. Treinamento regular, simulações de phishing e políticas de dupla aprovação para transferências reduzem o risco em 95%. A tecnologia ajuda, mas <strong>o fator humano é o elo mais fraco — e mais forte — da segurança</strong>.</p>
+</div>
+
+               <section id="video-caso">
+        <h2>Alguns golpes de engenharia social</h2>
+        <p>Assista ao vídeo abaixo para entender como funciona um ataques de engenharia social</p>
+        <div class="video-container">
+            <iframe width="1236" height="695" src="https://www.youtube.com/embed/r8OQ2vuyb2k" title="05 golpes de Engenharia Social que usam para enganar você" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+
+          <form id="quiz2">
+            <div class="pergunta"><strong>1.</strong> O que diferencia spear-phishing do phishing comum?<br>
+              <label><input type="radio" name="q2_1" value="0"> Envio em massa para milhões</label><br>
+              <label><input type="radio" name="q2_1" value="1"> Personalização com dados específicos da vítima</label><br>
+              <label><input type="radio" name="q2_1" value="0"> Uso exclusivo de SMS</label>
+            </div>
+
+            <div class="pergunta"><strong>2.</strong> Qual tática usa clonagem de voz por IA?<br>
+              <label><input type="radio" name="q2_2" value="1"> Vishing avançado</label><br>
+              <label><input type="radio" name="q2_2" value="0"> Baiting físico</label><br>
+              <label><input type="radio" name="q2_2" value="0"> Tailgating</label>
+            </div>
+
+            <div class="pergunta"><strong>3.</strong> O que é pretexting?<br>
+              <label><input type="radio" name="q2_3" value="1"> Criação de cenário falso para extrair informações</label><br>
+              <label><input type="radio" name="q2_3" value="0"> Envio de malware via e-mail</label><br>
+              <label><input type="radio" name="q2_3" value="0"> Exploração de vulnerabilidades técnicas</label>
+            </div>
+
+            <div class="pergunta"><strong>4.</strong> BEC refere-se a:<br>
+              <label><input type="radio" name="q2_4" value="1"> Comprometimento de e-mail corporativo</label><br>
+              <label><input type="radio" name="q2_4" value="0"> Backup automático de contas</label><br>
+              <label><input type="radio" name="q2_4" value="0"> Bloqueio de e-mails suspeitos</label>
+            </div>
+
+            <div class="pergunta"><strong>5.</strong> Como se defender de ataques de autoridade falsa?<br>
+              <label><input type="radio" name="q2_5" value="0"> Agir imediatamente na solicitação</label><br>
+              <label><input type="radio" name="q2_5" value="1"> Verificar via canal oficial independente</label><br>
+              <label><input type="radio" name="q2_5" value="0"> Compartilhar com colegas</label>
+            </div>
+
+            <div class="pergunta"><strong>6.</strong> Qual é um sinal de urgência artificial?<br>
+              <label><input type="radio" name="q2_6" value="0"> Pedidos rotineiros de atualização</label><br>
+              <label><input type="radio" name="q2_6" value="1"> Solicitações de ação imediata sem protocolo</label><br>
+              <label><input type="radio" name="q2_6" value="0"> Confirmação por múltiplos canais</label>
+            </div>
+
+            <div class="pergunta"><strong>7.</strong> O que é quid pro quo?<br>
+              <label><input type="radio" name="q2_7" value="1"> Oferta de ajuda em troca de acesso</label><br>
+              <label><input type="radio" name="q2_7" value="0"> Troca de senhas entre equipes</label><br>
+              <label><input type="radio" name="q2_7" value="0"> Backup recíproco de dados</label>
+            </div>
+
+            <div class="pergunta"><strong>8.</strong> Qual princípio mitiga engenharia social?<br>
+              <label><input type="radio" name="q2_8" value="0"> Confiança implícita em e-mails</label><br>
+              <label><input type="radio" name="q2_8" value="1"> Zero trust – verificar tudo</label><br>
+              <label><input type="radio" name="q2_8" value="0"> Resposta rápida a urgências</label>
+            </div>
+
+            <div class="pergunta"><strong>9.</strong> Como OSINT auxilia atacantes?<br>
+              <label><input type="radio" name="q2_9" value="1"> Coleta de dados públicos para personalização</label><br>
+              <label><input type="radio" name="q2_9" value="0"> Criptografia de mensagens</label><br>
+              <label><input type="radio" name="q2_9" value="0"> Bloqueio de IPs suspeitos</label>
+            </div>
+
+            <div class="pergunta"><strong>10.</strong> Qual porcentagem de breaches envolve engenharia social?<br>
+              <label><input type="radio" name="q2_10" value="1"> Cerca de 90% segundo relatórios de 2025</label><br>
+              <label><input type="radio" name="q2_10" value="0"> Menos de 20%</label><br>
+              <label><input type="radio" name="q2_10" value="0"> Apenas em ataques técnicos</label>
+            </div>
+
+            <button type="submit" class="botao-form">Enviar</button>
+            <p class="resultado"></p>
+          </form>
+        </div>
+      </div>
+
+      <!-- MÓDULO 03 -->
+      <div class="modulos">
+        <h3>🛡️ Módulo 03 - Segurança em Redes e VPNs Intermediárias</h3>
+        <p>Configure redes seguras, entenda firewalls, segmentação e o uso avançado de VPNs para proteção em trânsito.</p>
+        <button class="botao-form" onclick="abrirModulo('mod3')">Iniciar</button>
+
+        <div id="mod3" class="conteudo-modulo" style="display:none;">
+          <p>Redes mal configuradas são portas de entrada; aprenda a implementar defesas em camadas com ferramentas intermediárias.</p>
+
+
+<div class="estudo" style="background:#0b0b0b;padding:15px;border-radius:8px;margin-bottom:12px;color:#e6e6e6;">
+  <h4 style="color:#00ff9d;margin-top:0;">Conteúdo de Estudo — Segurança em Redes e VPNs Intermediárias</h4>
+
+  <p>A segurança de rede é uma defesa em camadas. O <strong>firewall stateful</strong> vai além de bloquear IPs: ele acompanha o <strong>estado da conexão</strong>. Por exemplo, se você inicia uma requisição ao Google (porta 443), o firewall permite a resposta. Mas se um pacote chegar sem ter sido solicitado, é bloqueado. Isso impede ataques como SYN flood ou spoofing. Em casa, ative o firewall do Windows/macOS e use roteadores com inspeção stateful (como modelos da TP-Link ou ASUS com AiProtection).</p>
+
+  <p>A <strong>segmentação de rede com VLANs</strong> isola dispositivos. Em uma empresa, a VLAN 10 pode ser para RH, VLAN 20 para financeiro, VLAN 30 para TI. Se um funcionário do RH for infectado por ransomware, o malware não alcança os servidores financeiros. Em casa, crie uma <strong>rede de convidados</strong> separada para IoT (câmeras, geladeira inteligente) — assim, se a câmera for hackeada, não acessa seu PC.</p>
+
+  <p><strong>IDS (Intrusion Detection System)</strong> e <strong>IPS (Intrusion Prevention System)</strong> monitoram o tráfego em tempo real. O IDS alerta (ex.: “varredura de portas detectada”), o IPS age (bloqueia o IP automaticamente). Ferramentas como <strong>Snort</strong> ou <strong>Suricata</strong> são open-source. Para análise forense, use <strong>Wireshark</strong>: capture pacotes, filtre por IP ou protocolo e veja exatamente o que está acontecendo na rede (útil para identificar exfiltração de dados).</p>
+
+  <p>O <strong>hardening de roteadores</strong> é essencial. Desative o <strong>WPS</strong> — o PIN de 8 dígitos pode ser quebrado em horas com ferramentas como Reaver. Mude o SSID padrão (“TP-Link_1234” revela o modelo), use <strong>WPA3</strong> (mais seguro que WPA2) e aplique o <strong>princípio do menor privilégio</strong>: o dispositivo da babá eletrônica não precisa acessar a impressora. Em empresas, bloqueie portas desnecessárias (ex.: RDP na internet).</p>
+
+  <p>As <strong>VPNs</strong> criptografam dados em trânsito. O protocolo <strong>WireGuard</strong> é o padrão em 2025: rápido, leve e com criptografia moderna (ChaCha20). Evite <strong>PPTP</strong> — quebrado desde 1998. Em empresas, <strong>SD-WAN seguro</strong> combina múltiplas conexões (fibra, 4G) com criptografia, enquanto o <strong>ZTNA (Zero Trust Network Access)</strong> verifica identidade e contexto a cada acesso, não só no login. A combinação de firewall + VLAN + VPN + ZTNA <strong>reduz a superfície de ataque em até 80%</strong>. Em redes públicas (shoppings, aeroportos), <strong>nunca acesse banco sem VPN</strong> — ataques man-in-the-middle são comuns.</p>
+</div>
+
+                         <section id="video-caso">
+        <h2>Segurança em Redes e VPNs</h2>
+        <p>Assista ao vídeo abaixo para entender como funciona Segurança em Redes e VPNs</p>
+        <div class="video-container">
+        <iframe width="1236" height="695" src="https://www.youtube.com/embed/wlQsKxCWCY4" title="Segurança em Redes de Computadores - VPN Rede Privada Virtual" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+
+
+          <form id="quiz3">
+            <div class="pergunta"><strong>1.</strong> O que um firewall stateful faz?<br>
+              <label><input type="radio" name="q3_1" value="1"> Inspeciona pacotes com base no estado da conexão</label><br>
+              <label><input type="radio" name="q3_1" value="0"> Apenas bloqueia IPs fixos</label><br>
+              <label><input type="radio" name="q3_1" value="0"> Armazena logs indefinidamente</label>
+            </div>
+
+            <div class="pergunta"><strong>2.</strong> Qual protocolo VPN é recomendado em 2025?<br>
+              <label><input type="radio" name="q3_2" value="0"> PPTP</label><br>
+              <label><input type="radio" name="q3_2" value="1"> WireGuard</label><br>
+              <label><input type="radio" name="q3_2" value="0"> L2TP</label>
+            </div>
+
+            <div class="pergunta"><strong>3.</strong> O que é segmentação de rede?<br>
+              <label><input type="radio" name="q3_3" value="1"> Isolamento de sub-redes via VLANs</label><br>
+              <label><input type="radio" name="q3_3" value="0"> Aumento de velocidade geral</label><br>
+              <label><input type="radio" name="q3_3" value="0"> Backup de configurações</label>
+            </div>
+
+            <div class="pergunta"><strong>4.</strong> IDS/IPS serve para:<br>
+              <label><input type="radio" name="q3_4" value="0"> Apenas detectar malware</label><br>
+              <label><input type="radio" name="q3_4" value="1"> Detectar e prevenir intrusões em tempo real</label><br>
+              <label><input type="radio" name="q3_4" value="0"> Gerenciar senhas de rede</label>
+            </div>
+
+            <div class="pergunta"><strong>5.</strong> Por que desativar WPS em roteadores?<br>
+              <label><input type="radio" name="q3_5" value="1"> Vulnerável a ataques de força bruta no PIN</label><br>
+              <label><input type="radio" name="q3_5" value="0"> Reduz velocidade Wi-Fi</label><br>
+              <label><input type="radio" name="q3_5" value="0"> Consome mais energia</label>
+            </div>
+
+            <div class="pergunta"><strong>6.</strong> O que é ZTNA?<br>
+              <label><input type="radio" name="q3_6" value="0"> VPN tradicional</label><br>
+              <label><input type="radio" name="q3_6" value="1"> Acesso de rede zero trust com verificação contínua</label><br>
+              <label><input type="radio" name="q3_6" value="0"> Firewall básico</label>
+            </div>
+
+            <div class="pergunta"><strong>7.</strong> Qual ferramenta analisa tráfego de rede?<br>
+              <label><input type="radio" name="q3_7" value="1"> Wireshark</label><br>
+              <label><input type="radio" name="q3_7" value="0"> Notepad</label><br>
+              <label><input type="radio" name="q3_7" value="0"> Calculator</label>
+            </div>
+
+            <div class="pergunta"><strong>8.</strong> Princípio do menor privilégio significa:<br>
+              <label><input type="radio" name="q3_8" value="0"> Acesso total para administradores</label><br>
+              <label><input type="radio" name="q3_8" value="1"> Conceder apenas permissões necessárias</label><br>
+              <label><input type="radio" name="q3_8" value="0"> Compartilhar credenciais</label>
+            </div>
+
+            <div class="pergunta"><strong>9.</strong> SD-WAN seguro integra:<br>
+              <label><input type="radio" name="q3_9" value="1"> Rede definida por software com criptografia</label><br>
+              <label><input type="radio" name="q3_9" value="0"> Apenas aumento de banda</label><br>
+              <label><input type="radio" name="q3_9" value="0"> Backup de hardware</label>
+            </div>
+
+            <div class="pergunta"><strong>10.</strong> Camadas de segurança reduzem ataque em quanto?<br>
+              <label><input type="radio" name="q3_10" value="0"> 20%</label><br>
+              <label><input type="radio" name="q3_10" value="1"> Cerca de 80%</label><br>
+              <label><input type="radio" name="q3_10" value="0"> 100%</label>
+            </div>
+
+            <button type="submit" class="botao-form">Enviar</button>
+            <p class="resultado"></p>
+          </form>
+        </div>
+      </div>
+
+      <!-- MÓDULO 04 -->
+      <div class="modulos">
+        <h3>🔒 Módulo 04 - Criptografia e Proteção de Dados em Repouso</h3>
+        <p>Entenda algoritmos de criptografia, gerenciamento de chaves e proteção de dados armazenados contra acessos não autorizados.</p>
+        <button class="botao-form" onclick="abrirModulo('mod4')">Iniciar</button>
+
+        <div id="mod4" class="conteudo-modulo" style="display:none;">
+          <p>A criptografia intermediária protege dados em discos, bancos e backups, usando padrões como AES-256 e PBKDF2.</p>
+
+
+<div class="estudo" style="background:#0b0b0b;padding:15px;border-radius:8px;margin-bottom:12px;color:#e6e6e6;">
+  <h4 style="color:#00ff9d;margin-top:0;">Conteúdo de Estudo — Criptografia e Proteção de Dados em Repouso</h4>
+
+  <p>A criptografia em repouso protege dados armazenados (discos, bancos, backups). O <strong>AES-256</strong> é o padrão ouro: algoritmo simétrico aprovado pela NSA, usado em <strong>Full Disk Encryption (FDE)</strong>. No Windows, o <strong>BitLocker</strong> criptografa todo o HD com TPM (chip seguro no PC). No macOS, o <strong>FileVault</strong> faz o mesmo. Em bancos de dados, a <strong>TDE (Transparent Data Encryption)</strong> criptografa arquivos .mdf/.ldf sem alterar o código da aplicação — o banco descriptografa automaticamente para usuários autorizados.</p>
+
+  <p>O <strong>gerenciamento de chaves</strong> é crítico. Uma chave perdida = dados perdidos para sempre. Uma chave roubada = dados expostos. Use <strong>HSMs (Hardware Security Modules)</strong> — dispositivos físicos tamper-proof que geram, armazenam e rotacionam chaves. Ou serviços na nuvem como <strong>AWS KMS</strong> ou <strong>Azure Key Vault</strong>. <strong>Rotacione chaves a cada 90 dias</strong>: mesmo que uma seja comprometida, só descriptografa dados de um período limitado. Faça backup das chaves em local seguro e criptografado.</p>
+
+  <p>Para senhas armazenadas, <strong>nunca use MD5 ou SHA-1</strong> — quebrados há décadas. Use <strong>PBKDF2, bcrypt ou Argon2 com sal aleatório</strong>. O “sal” é um valor único por usuário que impede rainbow tables. O Argon2 é o mais seguro contra GPUs (usado em ataques de força bruta). A <strong>tokenização</strong> substitui dados sensíveis (ex.: cartão 1234-5678-9012-3456) por um token aleatório (ex.: tok_7x9p2m), mantendo o formato para sistemas legados, mas sem expor o dado real.</p>
+
+  <p>A <strong>criptografia assimétrica (RSA)</strong> usa par de chaves: pública (para criptografar) e privada (para descriptografar). É usada para troca segura de chaves simétricas (ex.: TLS em HTTPS). Mas computadores quânticos (previstos para 2030) quebrarão RSA e ECC. A <strong>criptografia pós-quântica</strong> usa algoritmos baseados em lattice, hash ou código (ex.: Kyber, Dilithium) — já em teste pelo NIST. Use <strong>OpenSSL</strong> para testar: <code>openssl enc -aes-256-cbc -in arquivo.txt -out arquivo.enc</code>.</p>
+
+  <p>Boas práticas: <strong>backups sempre criptografados</strong> (nunca em texto plano), <strong>destruição segura</strong> (overwrite com 3 passagens ou trituração física de HDs), auditoria de chaves e conformidade com <strong>LGPD</strong> (art. 46 exige criptografia para dados sensíveis). Uma chave mal gerenciada pode expor anos de informações. Em 2025, a criptografia em repouso não é mais opcional — é <strong>obrigação técnica, legal e ética</strong>.</p>
+</div>
+
+                         <section id="video-caso">
+        <h2>Criptografia</h2>
+        <p>Assista ao vídeo abaixo para entender como funciona a criptografia</p>
+        <div class="video-container">
+        <iframe width="1236" height="695" src="https://www.youtube.com/embed/AO8sF4JfD-Y" title="O Que é Criptografia e Como Funciona (Tipos de Criptografia | Chave Simétrica x Chave Assimétrica)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+
+
+          <form id="quiz4">
+            <div class="pergunta"><strong>1.</strong> Qual algoritmo é padrão para criptografia em repouso?<br>
+              <label><input type="radio" name="q4_1" value="0"> DES</label><br>
+              <label><input type="radio" name="q4_1" value="1"> AES-256</label><br>
+              <label><input type="radio" name="q4_1" value="0"> MD5</label>
+            </div>
+
+            <div class="pergunta"><strong>2.</strong> O que é HSM?<br>
+              <label><input type="radio" name="q4_2" value="1"> Módulo de segurança hardware para chaves</label><br>
+              <label><input type="radio" name="q4_2" value="0"> Software de backup</label><br>
+              <label><input type="radio" name="q4_2" value="0"> Firewall de rede</label>
+            </div>
+
+            <div class="pergunta"><strong>3.</strong> FDE significa:<br>
+              <label><input type="radio" name="q4_3" value="0"> Firewall Disk Encryption</label><br>
+              <label><input type="radio" name="q4_3" value="1"> Full Disk Encryption</label><br>
+              <label><input type="radio" name="q4_3" value="0"> File Download Engine</label>
+            </div>
+
+            <div class="pergunta"><strong>4.</strong> Para hashing de senhas, use:<br>
+              <label><input type="radio" name="q4_4" value="0"> SHA-1</label><br>
+              <label><input type="radio" name="q4_4" value="1"> Argon2 ou PBKDF2 com sal</label><br>
+              <label><input type="radio" name="q4_4" value="0"> Plain text</label>
+            </div>
+
+            <div class="pergunta"><strong>5.</strong> O que é tokenização?<br>
+              <label><input type="radio" name="q4_5" value="1"> Substituição de dados sensíveis por tokens</label><br>
+              <label><input type="radio" name="q4_5" value="0"> Compactação de arquivos</label><br>
+              <label><input type="radio" name="q4_5" value="0"> Criptografia de rede</label>
+            </div>
+
+            <div class="pergunta"><strong>6.</strong> Criptografia pós-quântica usa:<br>
+              <label><input type="radio" name="q4_6" value="0"> Algoritmos clássicos</label><br>
+              <label><input type="radio" name="q4_6" value="1"> Métodos baseados em lattice</label><br>
+              <label><input type="radio" name="q4_6" value="0"> Apenas RSA</label>
+            </div>
+
+            <div class="pergunta"><strong>7.</strong> TDE é criptografia de:<br>
+              <label><input type="radio" name="q4_7" value="1"> Banco de dados transparente</label><br>
+              <label><input type="radio" name="q4_7" value="0"> Tráfego de e-mail</label><br>
+              <label><input type="radio" name="q4_7" value="0"> Dispositivos móveis</label>
+            </div>
+
+            <div class="pergunta"><strong>8.</strong> Por que rotacionar chaves?<br>
+              <label><input type="radio" name="q4_8" value="0"> Aumentar complexidade</label><br>
+              <label><input type="radio" name="q4_8" value="1"> Limitar dano em caso de comprometimento</label><br>
+              <label><input type="radio" name="q4_8" value="0"> Reduzir desempenho</label>
+            </div>
+
+            <div class="pergunta"><strong>9.</strong> Ferramenta para testar criptografia:<br>
+              <label><input type="radio" name="q4_9" value="1"> OpenSSL</label><br>
+              <label><input type="radio" name="q4_9" value="0"> Paint</label><br>
+              <label><input type="radio" name="q4_9" value="0"> Excel</label>
+            </div>
+
+            <div class="pergunta"><strong>10.</strong> Backup de dados deve ser:<br>
+              <label><input type="radio" name="q4_10" value="0"> Armazenado em claro</label><br>
+              <label><input type="radio" name="q4_10" value="1"> Criptografado e com controle de acesso</label><br>
+              <label><input type="radio" name="q4_10" value="0"> Compartilhado publicamente</label>
+            </div>
+
+            <button type="submit" class="botao-form">Enviar</button>
+            <p class="resultado"></p>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    function abrirModulo(id) {
+      const modulo = document.getElementById(id);
+      modulo.style.display = "block";
+      modulo.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    document.querySelectorAll("form").forEach(form => {
+      form.addEventListener("submit", function(e){
+        e.preventDefault();
+        let score = 0;
+        const radios = this.querySelectorAll("input[type='radio']:checked");
+        radios.forEach(r => score += parseInt(r.value));
+        const total = this.querySelectorAll(".pergunta").length;
+        const resultado = this.querySelector(".resultado");
+        if(score === total){
+          resultado.textContent = `✅ Parabéns! Você acertou todas as ${total} perguntas!`;
+          resultado.style.color = "#00ff9d";
+        } else if(score >= total / 2){
+          resultado.textContent = `⚠️ Você acertou ${score} de ${total}. Continue estudando!`;
+          resultado.style.color = "#ffcc00";
+        } else {
+          resultado.textContent = `❌ Você acertou apenas ${score} de ${total}. Tente novamente!`;
+          resultado.style.color = "#ff6666";
+        }
+        setTimeout(() => {
+          this.parentElement.style.display = "none";
+        }, 3000);
+      });
+    });
+  </script>
+
+    <footer>
+        <p>Projeto de Extensão — Navegar com segurança | 2025</p>
+    </footer>
+
+</body>
+</html>
+
+
