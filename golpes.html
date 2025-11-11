@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Golpes mais comuns</title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo"><img src="assets/Gemini_Generated_Image_8ipore8ipore8ipo.png" style="width: 100px;"
+                alt="Logo"></div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Início</a></li>
+
+        </ul>
+        <div class="menu-toggle" id="menuToggle">&#9776;</div>
+    </nav>
+
+    <script>
+        // Script simples para abrir/fechar o menu no mobile
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+
+
+
+    <header class="hero">
+        <div class="overlay"></div>
+        <div class="conteudo-hero">
+            <h1 class="animar"> Veja os golpes mais comuns no mundo da <span style="color: #00ff9d;"> Segurança
+                    Digital!</span> </h1>
+            <p>O intuito é tomar conhecimento e entender o modus operanidi dos golpistas.<br><br><br><br></p>
+
+        </div>
+    </header>
+
+
+    <section id="opcoes-modulos">
+        <h2>Escolha por onde começar</h2>
+
+        <div class="container-modulos">
+
+            <div class="modulos">
+                <strong>Phishing</strong>
+                <p>Tentativa de roubar informações confidenciais (senhas, dados bancários) disfarçando-se de uma
+                    entidade confiável (como um banco ou empresa) em uma comunicação eletrônica (e-mail, SMS, telefone),
+                    buscando que a vítima clique em um link malicioso ou insira dados em um site falso.</p>
+                <a href="#phishing"><button id="botao-opcoes">Aprender</button></a>
+            </div>
+
+            <div class="modulos">
+                <strong>Ransomware</strong>
+                <p>Software malicioso que criptografa os arquivos ou o sistema da vítima, bloqueando o acesso. O invasor
+                    exige então um pagamento de **resgate** (geralmente em criptomoedas) para fornecer a chave de
+                    descriptografia e restaurar o acesso aos dados.</p>
+                <a href="#ransomware"> <button id="botao-opcoes">Aprender</button></a>
+            </div>
+
+            <div class="modulos">
+                <strong>Malware</strong>
+                <p>Termo amplo para qualquer software malicioso (inclui vírus, cavalos de Tróia, spyware e *adware*)
+                    projetado para danificar, desabilitar ou obter acesso não autorizado a um sistema ou rede de
+                    computador sem o consentimento do usuário.</p>
+                <a href="#malware"><button id="botao-opcoes">Aprender</button></a>
+            </div>
+
+            <div class="modulos">
+                <strong>Engenharia Social</strong>
+                <p>É a manipulação psicológica de pessoas para que elas realizem ações (como transferir dinheiro) ou
+                    divulguem informações confidenciais (como senhas), explorando o lado humano da segurança, como a
+                    **confiança**, a **curiosidade** ou a **urgência** da vítima.</p>
+                <a href="#engenhariasocial"><button id="botao-opcoes">Aprender</button></a>
+            </div>
+
+            <div class="modulos">
+                <strong>Ataques de Negação de Serviço Distribuída (DDoS)</strong>
+                <p>Ataque que sobrecarrega intencionalmente um servidor, serviço ou rede com um volume massivo de
+                    tráfego, geralmente coordenado a partir de vários dispositivos comprometidos (botnets), tornando o
+                    **serviço lento ou totalmente indisponível** para usuários legítimos.</p>
+                <a href="#ddos"><button id="botao-opcoes">Aprender</button></a>
+            </div>
+
+            <div class="modulos">
+                <strong>Ataques Man-in-the-Middle (MitM)</strong>
+                <p>Um tipo de interceptação onde o invasor se insere secretamente entre duas partes (como seu computador
+                    e um site) que estão se comunicando, podendo **roubar** ou **modificar** o tráfego de dados que
+                    passa entre elas sem que nenhuma das partes perceba.</p>
+               <a href="#mitm"> <button id="botao-opcoes">Aprender</button> </a>
+            </div>
+
+        </div>
+    </section>
+
+   
+    <section id="importancia">
+
+        <div id="phishing" class="estudo" style="background:#0b0b0b;padding:15px;border-radius:8px;margin-bottom:12px;color:#e6e6e6;">
+            <h4 style="color:#00ff9d;margin-top:0;">Conteúdo de Estudo — Phishing e Engenharia Social</h4>
+            <p>O **Phishing** é a técnica mais comum de ataque baseada em Engenharia Social. Ele explora a confiança e o
+                senso de urgência, levando a vítima a fornecer dados sensíveis, como senhas e informações bancárias, ao
+                se passar por uma entidade legítima.</p>
+
+            <p>A chave para o sucesso do Phishing está na imitação convincente. Os criminosos replicam logotipos,
+                *layouts* e até endereços de e-mail de empresas reais para induzir o usuário ao erro.</p>
+
+            <p>Os principais tipos de Phishing incluem:</p>
+
+            <ul>
+                <li><strong>Spear Phishing:</strong> Ataque direcionado a um indivíduo específico, usando informações
+                    pessoais para torná-lo mais crível.</li>
+                <li><strong>Vishing:</strong> Phishing realizado por chamada de voz (Voz + Phishing), onde o golpista
+                    usa a pressão da interação direta.</li>
+                <li><strong>Smishing:</strong> Phishing realizado via SMS (Mensagens de Texto), geralmente pedindo que a
+                    vítima clique em um link para "rastrear" uma encomenda.</li>
+            </ul>
+
+            <p>A **Verificação de Link** é a defesa primária. Antes de clicar, passe o mouse sobre o link para verificar
+                se o endereço real (URL) corresponde ao que é exibido. Além disso, desconfie de e-mails que pedem dados
+                pessoais de forma inesperada ou que contêm erros de português grosseiros.</p>
+
+            <p>Sua defesa contra o Phishing é uma **mentalidade crítica** em relação a qualquer comunicação que peça
+                informações urgentes ou dados de login.</p>
+        </div>
+
+            
+        <h2>📺 Phishing</h2>
+        <p>Assista ao vídeo abaixo para entender mais sobre o que é Phishing</p>
+        <div class="video-container">
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/epKElqLAgX0" title="O que é Phishing? Como se proteger?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+
+    </section>
+
+    <section id="importancia">
+        <div id="ransomware" class="estudo" style="background:#0b0b0b;padding:15px;border-radius:8px;margin-bottom:12px;color:#e6e6e6;">
+            <h4 style="color:#00ff9d;margin-top:0;">Conteúdo de Estudo — Ransomware e a Dupla Extorsão</h4>
+            <p>**Ransomware** é um tipo de software malicioso que executa a **criptografia** (codificação) dos arquivos
+                da vítima, tornando-os inacessíveis. Em seguida, exige-se um pagamento de **resgate** (*ransom*) em
+                troca da chave de descriptografia.</p>
+
+            <p>Este ataque se tornou o mais lucrativo do cibercrime, pois explora a indisponibilidade e a criticidade
+                dos dados para paralisar empresas e indivíduos. O pagamento do resgate é quase sempre exigido em
+                **criptomoedas** para garantir o anonimato do atacante.</p>
+
+            <p>As etapas de um ataque de Ransomware são:</p>
+
+            <ul>
+                <li><strong>Infecção:</strong> O malware entra no sistema, frequentemente via Phishing ou
+                    vulnerabilidade de software desatualizado.</li>
+                <li><strong>Execução:</strong> O Ransomware se propaga rapidamente e criptografa os arquivos do sistema
+                    e, muitas vezes, da rede.</li>
+                <li><strong>Extorsão:</strong> Uma nota de resgate aparece na tela, com instruções de pagamento e um
+                    prazo limite.</li>
+            </ul>
+
+            <p>A tática da **Dupla Extorsão** é a ameaça de que, se o resgate não for pago, os dados roubados serão
+                vazados publicamente. A melhor defesa é ter **backups (cópias de segurança)** regulares e offline, além
+                de manter todos os sistemas e antivírus atualizados.</p>
+
+            <p>Recomenda-se **nunca pagar o resgate**, pois não há garantia de que os arquivos serão recuperados e isso
+                financia futuros ataques criminosos.</p>
+        </div>
+
+        <h2>📺 Ransomware </h2>
+        <p>Assista ao vídeo abaixo para entender mais sobre o que é Ransomware</p>
+        <div class="video-container">
+        <iframe width="640" height="360" src="https://www.youtube.com/embed/x9PgxTSbo0o" title="RANSOMWARE: o que é e COMO SE PROTEGER?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>     
+        </div>
+
+    </section>
+    <section id="importancia">
+        <div id="malware" class="estudo" style="background:#0b0b0b;padding:15px;border-radius:8px;margin-bottom:12px;color:#e6e6e6;">
+            <h4 style="color:#00ff9d;margin-top:0;">Conteúdo de Estudo — Malware: Vírus, Trojans e Spyware</h4>
+            <p>**Malware** é o termo genérico para qualquer software projetado com intenção maliciosa. Ele abrange uma
+                vasta família de ameaças, todas com o objetivo de obter controle, roubar dados ou causar danos ao
+                sistema operacional.</p>
+
+            <p>O Malware pode ser distribuído através de anexos de e-mail, sites comprometidos ou downloads de software
+                pirata. O principal risco é que ele pode operar de forma **furtiva** (escondida), coletando informações
+                por meses sem ser detectado.</p>
+
+            <p>Os principais tipos de Malware incluem:</p>
+
+            <ul>
+                <li><strong>Vírus:</strong> Anexa-se a arquivos e se replica quando o arquivo é executado.</li>
+                <li><strong>Cavalos de Tróia (*Trojans*):</strong> Disfarçado de software útil (ex: um jogo ou plugin),
+                    mas contém código destrutivo ou de espionagem.</li>
+                <li><strong>Spyware:</strong> Programas espiões que monitoram secretamente a atividade do usuário,
+                    capturando senhas (**Keyloggers**) e histórico de navegação.</li>
+            </ul>
+
+            <p>A proteção contra Malware requer o uso de um **antivírus** robusto e a prática de **navegação segura**. É
+                essencial evitar o download de arquivos de fontes não confiáveis e nunca desativar as ferramentas de
+                segurança do seu sistema.</p>
+
+            <p>O uso de **senhas fortes e únicas** para cada serviço também limita o estrago, caso um Spyware roube uma
+                de suas credenciais.</p>
+        </div>
+
+        <h2>📺 Malware </h2>
+        <p>Assista ao vídeo abaixo para entender mais sobre o que é Malware</p>
+        <div class="video-container">
+        <iframe width="640" height="360" src="https://www.youtube.com/embed/vCsCnX_h5BM" title="Todos os Tipos de Malwares de Computadores Explicados em 5 Minutos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>     
+        </div>
+
+    </section>
+    <section id="importancia">
+        <div id="engenhariasocial" class="estudo" style="background:#0b0b0b;padding:15px;border-radius:8px;margin-bottom:12px;color:#e6e6e6;">
+            <h4 style="color:#00ff9d;margin-top:0;">Conteúdo de Estudo — Engenharia Social: A Manipulação Humana</h4>
+            <p>**Engenharia Social** não é um ataque de software, mas sim a **manipulação psicológica** de pessoas para
+                que elas cometam erros de segurança ou divulguem informações confidenciais. É a exploração da
+                **vulnerabilidade humana** — o medo, a confiança, a ganância ou a curiosidade.</p>
+
+            <p>O criminoso usa táticas de convencimento para contornar as proteções tecnológicas, tornando o usuário o
+                "elo mais fraco" na cadeia de segurança. Este ataque exige preparo e pesquisa por parte do golpista
+                sobre o alvo.</p>
+
+            <p>As táticas de Engenharia Social mais usadas são:</p>
+
+            <ul>
+                <li><strong>Pretexto:</strong> Criação de uma história ou cenário falso (ex: se passar por suporte
+                    técnico ou colega de trabalho) para obter informações.</li>
+                <li><strong>Isca (*Baiting*):</strong> Oferecer algo atraente (ex: um pendrive USB "perdido" com um
+                    rótulo curioso) para que a vítima execute o arquivo malicioso.</li>
+                <li><strong>Quid pro Quo:</strong> Oferecer um "benefício" (ex: um sorteio) em troca de informações,
+                    como a senha.</li>
+            </ul>
+
+            <p>A melhor defesa é a **verificação constante**. Nunca confie em solicitações urgentes ou inesperadas que
+                exijam senhas ou transferências. Se um contato alegadamente legítimo ligar, desligue e ligue de volta
+                para o número oficial da empresa.</p>
+
+            <p>Lembre-se: **Nenhum banco ou serviço legítimo** solicitará sua senha por telefone ou e-mail.</p>
+        </div>
+
+        <h2>📺 Engenharia Social: A manipulação humana </h2>
+        <p>Assista ao vídeo abaixo para entender mais sobre o que é Engenharia Social </p>
+        <div class="video-container">
+        <iframe width="640" height="360" src="https://www.youtube.com/embed/e4geEP58oi4" title="O QUE É ENGENHARIA SOCIAL?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>     
+        </div>
+
+    </section>
+    <section id="importancia">
+        <div id="ddos" class="estudo" style="background:#0b0b0b;padding:15px;border-radius:8px;margin-bottom:12px;color:#e6e6e6;">
+            <h4 style="color:#00ff9d;margin-top:0;">Conteúdo de Estudo — Ataques DDoS: Paralisação de Serviços</h4>
+            <p>O **Ataque de Negação de Serviço Distribuída (DDoS)** tem como objetivo primário **tornar um serviço
+                online indisponível** para seus usuários legítimos. Isso é feito sobrecarregando o servidor ou a rede
+                com um volume excessivo de tráfego, exaurindo seus recursos e capacidade de processamento.</p>
+
+            <p>O ataque é **Distribuído** porque é orquestrado a partir de milhares ou milhões de dispositivos
+                comprometidos remotamente (como câmeras, roteadores e PCs infectados), formando uma **botnet** (rede de
+                robôs).</p>
+
+            <p>O principal impacto do DDoS é a **perda de receita e reputação** para a organização alvo, pois o serviço
+                fica inacessível. As motivações podem variar:</p>
+
+            <ul>
+                <li><strong>Extorsão:</strong> Exigir pagamento para parar o ataque.</li>
+                <li><strong>Sabotagem:</strong> Atacar um concorrente em um momento crítico de vendas (ex: Black
+                    Friday).</li>
+                <li><strong>Ativismo (*Hacktivism*):</strong> Usar o ataque para protestar ou causar transtorno a uma
+                    instituição.</li>
+            </ul>
+
+            <p>As defesas contra DDoS envolvem serviços de **mitigação de tráfego** baseados em nuvem que filtram o
+                tráfego malicioso antes que ele atinja o servidor de destino, garantindo a **disponibilidade** dos
+                serviços.</p>
+
+            <p>Manter seus próprios dispositivos livres de Malware ajuda a evitar que você, sem saber, faça parte de uma
+                botnet criminosa.</p>
+        </div>
+
+                <h2> Ataque de Negação de Serviço Distribuída (DDoS) </h2>
+        <p>Assista ao vídeo abaixo para entender mais sobre o que é Ataque de Negação de Serviço Distribuída (DDoS) </p>
+        <div class="video-container">
+        <iframe width="640" height="360" src="https://www.youtube.com/embed/UN1-wKAVB2Q" title="DoS e DDoS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>     
+        </div>
+
+    </section>
+    <section id="importancia">
+        <div id="mitm" class="estudo" style="background:#0b0b0b;padding:15px;border-radius:8px;margin-bottom:12px;color:#e6e6e6;">
+            <h4 style="color:#00ff9d;margin-top:0;">Conteúdo de Estudo — Ataques MitM: Interceptação Furtiva</h4>
+            <p>O **Ataque Man-in-the-Middle (Homem no Meio)** ocorre quando um invasor se insere secretamente na
+                comunicação entre duas partes, interceptando o tráfego de dados. O atacante pode **roubar informações**
+                (como credenciais de login) ou até **modificar os dados** transmitidos, sem que as vítimas percebam.</p>
+
+            <p>Este ataque é particularmente perigoso em redes abertas, onde o invasor pode facilmente se posicionar
+                entre o usuário e o destino final na internet.</p>
+
+            <p>Os principais métodos de Ataques MitM incluem:</p>
+
+            <ul>
+                <li>**Evil Twin (Gêmeo Maligno):** Criação de um ponto de acesso Wi-Fi falso, com um nome idêntico ou
+                    similar a uma rede legítima (ex: "Aeroporto_Gratis"), para atrair usuários.</li>
+                <li>**Sequestro de Sessão:** O atacante rouba o "token" de sessão (o identificador de login) e assume a
+                    identidade do usuário na aplicação web sem precisar da senha.</li>
+                <li>**Exploração de ARP:** Um ataque na rede local que engana os dispositivos, fazendo-os pensar que o
+                    tráfego deve passar primeiro pelo invasor.</li>
+            </ul>
+
+            <p>A defesa mais crucial é sempre usar conexões que possuam **HTTPS** (o cadeado verde no navegador), que
+                garante que a comunicação é criptografada de ponta a ponta. Evite realizar transações financeiras ou
+                logins em redes Wi-Fi públicas e não seguras.</p>
+
+            <p>Usar uma **VPN (Rede Privada Virtual)** em redes públicas criptografa seu tráfego, blindando você contra
+                a interceptação de MitM.</p>
+        </div>
+
+                       <h2>Ataque Man-in-the-Middle (Homem no Meio)</h2>
+        <p>Assista ao vídeo abaixo para entender mais sobre o que é Ataque Man-in-the-Middle (Homem no Meio) </p>
+        <div class="video-container">
+        <iframe width="640" height="360" src="https://www.youtube.com/embed/toBxNMpbYgg" title="Man-in-the-Middle" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    
+        </div>
+
+
+    </section>
+
+
+
+    <footer>
+        <p>Projeto de Extensão — Navegar com segurança | 2025</p>
+    </footer>
+</body>
+
+</html>
